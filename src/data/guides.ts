@@ -1,0 +1,623 @@
+import type { GuidePage } from "./types";
+
+/**
+ * Long-form guides — the informational SEO layer.
+ * URL: /resources/<slug>
+ */
+export const GUIDES: GuidePage[] = [
+  {
+    slug: "fit-out-permit-process-dubai",
+    name: "The Complete Dubai Fit-Out Permit Process",
+    title: "Fit-Out Permit Process in Dubai (2026) | Step-by-Step Guide",
+    metaDescription:
+      "How fit-out permits work in Dubai in 2026: authorities, NOCs, drawings, submission, comments, inspections and completion certificates — the complete step-by-step process explained.",
+    keywords: [
+      "how to get fit out permit dubai",
+      "fit out permit process",
+      "fit out approval process dubai",
+      "dubai fit out permit steps",
+    ],
+    heroImage: {
+      folder: "services",
+      base: "permit-management",
+      alt: "Complete fit-out permit dossier laid out with drawings, NOCs and approval stamps",
+    },
+    intro: [
+      "Every commercial fit-out in Dubai — office, shop, restaurant, clinic, warehouse — needs a permit before work starts, and a completion certificate before the space is legally occupied. The process is consistent in shape across the emirate, but the details change with jurisdiction: mainland units answer to Dubai Municipality, while free zones and master developments run their own building-control regimes.",
+      "This guide walks the whole path in order: identifying your authority, securing consents, preparing drawings, surviving review, building compliantly and closing out. It reflects the process as of July 2026; requirements vary by building and scope, and the authorities update their systems regularly.",
+    ],
+    sections: [
+      {
+        heading: "Step 1 — Identify your authority",
+        paragraphs: [
+          "Your unit's address decides everything. Mainland Dubai (most of the city) is Dubai Municipality territory, permitted through the Dubai BPS portal. TECOM districts — Internet City, Media City, d3 — belong to the DDA. JLT is DMCC via Concordia. Palm Jumeirah and PCFC areas run through Trakhees. DIFC, Dubai South, Silicon Oasis, JAFZA and Healthcare City each run their own regimes. Master communities like Emaar's and Nakheel's add a developer NOC on top of the government permit.",
+          "Getting this wrong wastes weeks: applications filed with the wrong authority don't get forwarded, they get abandoned. If you're unsure, our free Approval Finder answers it in under a minute.",
+        ],
+      },
+      {
+        heading: "Step 2 — Secure the consent chain",
+        paragraphs: [
+          "Before any authority reviews your drawings, private consents come first: the landlord's NOC, building or community management's technical conditions, and in master communities the developer's modification NOC. Buildings attach conditions — working hours, deposits, insurance minimums, contractor registration — that flow into your programme and budget.",
+        ],
+        bullets: [
+          "Landlord NOC — the universal prerequisite; authorities won't review without it",
+          "Building management technical conditions and refundable deposits",
+          "Master developer NOC (Emaar, Nakheel, Meraas communities)",
+          "Special consents: neighbours (villas), mall design review (retail)",
+        ],
+      },
+      {
+        heading: "Step 3 — Prepare permit-grade drawings",
+        paragraphs: [
+          "Authorities approve drawings, not descriptions. A permit package includes architectural sets (existing, demolition, proposed), MEP drawings with realistic load schedules, and fire & life-safety layouts referenced to the UAE Fire and Life Safety Code — stamped by engineers registered with the reviewing authority. Design-intent drawings from your interior designer are the starting point, not the submission.",
+          "The single highest-leverage investment in the whole process is a fresh site survey: as-built conditions in Dubai buildings routinely differ from archived drawings, and packages built on wrong baselines collect comments proportionally.",
+        ],
+      },
+      {
+        heading: "Step 4 — Submit and resolve comments",
+        paragraphs: [
+          "Submission happens through the authority's portal under registered consultant and contractor accounts. Reviewers respond with comments — technical queries and corrections — in rounds. A clean package typically survives one round; a poor one can cycle for months. Comments deserve engineering answers, not paperwork shuffles: reviewers approve applications that resolve their concerns, and remember the ones that argue.",
+          "Civil Defence review runs in parallel for any scope touching fire and life safety — which, given that partitions and ceilings change egress and detector coverage, means nearly every real fit-out.",
+        ],
+      },
+      {
+        heading: "Step 5 — Build compliantly",
+        paragraphs: [
+          "The permit authorises the works shown — exactly those. Site changes that feel trivial (a moved door, a lowered bulkhead, swapped materials) can invalidate the approval at inspection. Disciplined sites document deviations as they arise and amend the permit where needed; undisciplined ones discover them during the final inspection, in front of the inspector.",
+        ],
+      },
+      {
+        heading: "Step 6 — Inspections and the completion certificate",
+        paragraphs: [
+          "On completion, the authority and Civil Defence inspect the site against the approved drawings. Observations are issued, closed and re-verified, and the completion certificate follows. That certificate — not the furniture delivery — is what makes the unit legal to occupy, keeps trade-licence renewals smooth and satisfies insurers. Skipping it is the most common and least wise shortcut in the market.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "How long does the whole fit-out permit process take in Dubai?",
+        a: "For a standard commercial unit with a clean package: 2–4 weeks from NOC to permit, then the construction period, then 1–2 weeks of inspections and certification. The variance is almost entirely package quality and consent-chain speed — which is why specialists exist.",
+      },
+      {
+        q: "Can I start work while the permit is under review?",
+        a: "No — starting before permit issue risks fines, stop-work orders and complications that follow the unit for years. Early starts save days and routinely cost months.",
+      },
+      {
+        q: "Do I need a consultant, or can I apply myself?",
+        a: "Most authorities require applications under registered consultants and contractors, and the drawing standards effectively assume professional preparation. Even where self-filing is technically possible, the rejection economics argue against it.",
+      },
+    ],
+    relatedGuides: ["fit-out-permit-cost-dubai", "fit-out-permit-documents-checklist", "fit-out-permit-timeline-dubai"],
+  },
+  {
+    slug: "fit-out-permit-cost-dubai",
+    name: "Fit-Out Permit Costs in Dubai",
+    title: "Fit-Out Permit Cost Dubai (2026) | Fees Breakdown by Authority",
+    metaDescription:
+      "What a fit-out permit costs in Dubai in 2026: DM's AED 1/sq ft fee, DCD charges, free-zone fees, deposits and consultancy costs — a transparent breakdown with worked examples.",
+    keywords: [
+      "fit out permit cost",
+      "fit out approval cost dubai",
+      "authority approval fees dubai",
+      "dm permit fees",
+    ],
+    heroImage: {
+      folder: "services",
+      base: "completion",
+      alt: "Calculator and fee schedule beside approved fit-out permit documents",
+    },
+    intro: [
+      "Almost every consultancy in this market answers the cost question with 'contact us.' Here is the actual structure instead. Fit-out permit costs in Dubai stack four layers: government fees (formula-driven and predictable), refundable deposits (returned if you behave), consultancy fees (the market's least transparent layer) and the hidden fourth — the cost of delay, which dwarfs the other three when approvals go wrong.",
+      "Figures below reflect published schedules and our project experience as of July 2026. Exact fees vary by authority, area and scope; our calculator gives an instant estimate for your numbers, and our proposals itemise every layer separately.",
+    ],
+    sections: [
+      {
+        heading: "Government fees — the predictable layer",
+        paragraphs: [
+          "Dubai Municipality's headline fit-out permit fee is area-based — AED 1.00 per square foot of built-up area — plus small fixed charges (knowledge and innovation fees, typically AED 20 each per transaction) and a completion-certificate fee from around AED 500. Free zones and Trakhees publish their own schedules, generally scaling with area; DCD charges review and inspection fees from a few hundred dirhams, scaling with systems affected.",
+        ],
+        bullets: [
+          "1,000 sq ft mainland office: roughly AED 1,500–2,500 total government fees",
+          "3,000 sq ft restaurant (DM + food safety + DCD + DEWA): roughly AED 6,000–12,000",
+          "JLT office via DMCC/Concordia: review fees AED 1,000–3,000 plus refundable deposit",
+          "Villa extension (developer NOC + DM + DEWA): typically AED 4,000–12,000",
+        ],
+      },
+      {
+        heading: "Deposits — refundable if you finish properly",
+        paragraphs: [
+          "Buildings and communities hold fit-out deposits — AED 5,000–20,000 is common in towers — against common-area damage and proper closeout. They come back after clean completion, which makes the completion certificate a financial document, not just a legal one. Unrecovered deposits are one of the quiet leaks of the Dubai fit-out market; track them as receivables from day one.",
+        ],
+      },
+      {
+        heading: "Consultancy fees — what the market hides",
+        paragraphs: [
+          "Approvals consultancy for a straightforward commercial unit typically runs in the mid-four to low-five figures (AED), scaling with authority count and scope complexity — restaurants and clinics sit above offices; multi-authority and structural scopes above those. Anyone quoting without seeing the unit and scope is guessing; anyone bundling government fees into one opaque number is hiding the margin in the government's column.",
+          "Our rule: fixed fee quoted after a free scope review, government fees passed through at cost with receipts. If a proposal you're holding doesn't separate those layers, ask why.",
+        ],
+      },
+      {
+        heading: "The fourth cost — delay",
+        paragraphs: [
+          "Rent on a dark unit, staff hired for an opening that slips, franchise deadlines, seasonal windows missed: delay costs are the largest line item on most troubled projects and appear on no invoice. A rejected submission cycle typically costs 2–6 weeks. Priced against your rent, the case for doing approvals properly makes itself — it's the cheapest insurance in construction.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "What is the DM fee for a fit-out permit?",
+        a: "The core fee is AED 1.00 per square foot of built-up area, with a cap applying to very large industrial facilities, plus small fixed transaction fees and a completion-certificate fee. A 2,000 sq ft unit therefore pays roughly AED 2,000 in the headline fee.",
+      },
+      {
+        q: "Are government fees negotiable?",
+        a: "No — they're published schedules, which is precisely why they should be passed through at cost. The negotiable layer is consultancy, and the honest lever there is scope clarity, not haggling.",
+      },
+      {
+        q: "Why do quotes for the same project differ so much?",
+        a: "Usually because they're not quoting the same thing: different assumed scopes, government fees bundled versus separated, drawings included versus excluded, completion certificate included versus abandoned. Normalise the scopes and the spread narrows fast.",
+      },
+    ],
+    relatedGuides: ["fit-out-permit-process-dubai", "fit-out-permit-timeline-dubai", "fit-out-permit-documents-checklist"],
+  },
+  {
+    slug: "fit-out-permit-documents-checklist",
+    name: "Fit-Out Permit Documents Checklist",
+    title: "Fit-Out Permit Documents Dubai | The Complete 2026 Checklist",
+    metaDescription:
+      "Every document a Dubai fit-out permit needs in 2026: trade licence, Ejari, NOCs, drawings, contractor registrations and more — organised as the checklist authorities actually review against.",
+    keywords: [
+      "fit out permit documents",
+      "documents required for fit out permit dubai",
+      "fit out approval checklist",
+      "noc documents fit out",
+    ],
+    heroImage: {
+      folder: "services",
+      base: "noc",
+      alt: "Organised document checklist folder with NOCs, licences and drawings tabbed for submission",
+    },
+    intro: [
+      "Incomplete documentation is the most preventable cause of fit-out delay in Dubai — portals happily accept partial applications and let them sit. This is the complete checklist we run internally, organised the way reviewers actually consume it: corporate documents, property documents, consents, drawings, and contractor credentials.",
+      "Requirements vary by authority and scope; items below are marked accordingly. Treat this as the superset — your project needs most of it, and knowing which parts it doesn't need is half the consulting.",
+    ],
+    sections: [
+      {
+        heading: "Corporate & identity documents",
+        bullets: [
+          "Trade licence — valid, with an activity matching the intended use of the unit",
+          "Emirates ID + passport copy of the authorised signatory",
+          "Power of attorney / authorisation letter where an agent signs",
+          "For new businesses: initial approval from DED or the free zone",
+        ],
+      },
+      {
+        heading: "Property documents",
+        bullets: [
+          "Tenancy contract and Ejari registration (mainland) or free-zone lease",
+          "Title deed for owned property; affection plan for villas and plots",
+          "Existing unit drawings / handover documentation from the landlord",
+          "Previous permits and completion certificates where the unit was fitted before",
+        ],
+      },
+      {
+        heading: "Consents (the NOC chain)",
+        bullets: [
+          "Landlord NOC — universal; authorities will not review without it",
+          "Building/community management technical NOC with conditions",
+          "Master developer NOC (Emaar, Nakheel, Meraas communities)",
+          "DEWA NOC for load, meter or connection-affecting works",
+          "RTA NOC where access, parking or right-of-way is touched",
+          "Neighbour consents where community rules require them (villas)",
+        ],
+      },
+      {
+        heading: "Drawings & technical documents",
+        bullets: [
+          "Architectural set: existing, demolition, proposed — engineer-stamped",
+          "MEP set: electrical loads, drainage, water, HVAC layouts",
+          "Fire & life-safety drawings to the UAE Fire and Life Safety Code",
+          "Structural drawings + calculations where structure is affected",
+          "Specialist packages by scope: kitchen/food-flow, medical layout (DHA), acoustic reports (gyms/towers)",
+        ],
+      },
+      {
+        heading: "Contractor & consultant credentials",
+        bullets: [
+          "Contractor trade licence with the correct activity classification",
+          "Authority registrations (DM/Trakhees/DDA/free zone as applicable)",
+          "Insurances: workmen's compensation + third-party liability at the building's minimums",
+          "DCD specialist registrations for fire-system works",
+          "Consultant appointment and engineer registration for stamping",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "What's the most commonly missing document?",
+        a: "The building-management NOC — everyone remembers the landlord, and towers frequently require a second, technical consent from the managing agent with its own checklist and deposit. Second place: contractor insurance certificates that don't meet the building's stated minimums.",
+      },
+      {
+        q: "Do documents need attestation or translation?",
+        a: "Standard corporate and property documents in English or Arabic generally file as-is. Foreign documents (overseas POAs, parent-company papers) may need legalisation. We flag exactly which, per case, before anything is couriered anywhere.",
+      },
+      {
+        q: "How current must everything be?",
+        a: "Licences, Ejari and insurances must be valid at submission and stay valid through review — a licence expiring mid-review stalls the application. We diarise expiry dates across the document set as standard practice.",
+      },
+    ],
+    relatedGuides: ["fit-out-permit-process-dubai", "landlord-noc-vs-authority-approval", "fit-out-permit-cost-dubai"],
+  },
+  {
+    slug: "dm-vs-dda-vs-trakhees",
+    name: "DM vs DDA vs Trakhees — Which Authority Governs Your Unit?",
+    title: "DM vs DDA vs Trakhees | Which Dubai Authority Approves Your Fit-Out?",
+    metaDescription:
+      "Dubai Municipality, DDA, Trakhees, DMCC, DIFC or a free zone — how to tell which authority governs your fit-out, how their processes differ, and what changes in documents, fees and timelines.",
+    keywords: [
+      "dm vs dda",
+      "trakhees vs dubai municipality",
+      "which authority fit out dubai",
+      "dubai free zone fit out approval",
+    ],
+    heroImage: {
+      folder: "authorities",
+      base: "dda",
+      alt: "Dubai skyline spanning mainland, free zone and waterfront jurisdictions at dusk",
+    },
+    intro: [
+      "Dubai runs multiple parallel building-control regimes, and your unit's address — not your preference — decides which one owns your fit-out. Filing with the wrong authority doesn't get you redirected; it gets you ignored. This guide maps the jurisdictions and compares how the big three (DM, DDA, Trakhees) actually differ in practice.",
+      "The comparison matters beyond trivia: jurisdictions differ in portals, registration requirements, drawing conventions, fee structures and inspection culture. A contractor brilliant in DM territory can flounder in Trakhees; a package perfect for DDA needs rework for DIFC.",
+    ],
+    sections: [
+      {
+        heading: "The jurisdiction map",
+        bullets: [
+          "Dubai Municipality — mainland Dubai: most of the city, Al Quoz, Deira, Business Bay, Downtown buildings on mainland title",
+          "DDA — TECOM districts: Internet City, Media City, d3, Studio City, Science Park, Knowledge Park, Production City",
+          "Trakhees — PCFC areas: Palm Jumeirah, Dubai World communities, Dragon Mart, National Industries Park",
+          "DMCC/Concordia — JLT's towers and podium retail",
+          "DIFC — the financial centre's own building control",
+          "JAFZA, Dubai South, DSO, DHCC — each free zone runs its own regime",
+          "Master communities (Emaar, Nakheel) — developer NOC on top of the government authority",
+        ],
+      },
+      {
+        heading: "Dubai Municipality — the default and the biggest",
+        paragraphs: [
+          "DM handles the emirate's volume through the Dubai BPS portal, with an automated compliance pre-scan, published fee formulas (AED 1/sq ft headline) and the deepest bench of registered consultants and contractors. Its process rewards familiarity with the portal's activity codes and sequencing; its inspectors are pragmatic and volume-calibrated. If you only ever learn one regime, it's this one — but Dubai won't let you stop there.",
+        ],
+      },
+      {
+        heading: "DDA — digital-first and guideline-driven",
+        paragraphs: [
+          "DDA publishes per-community fit-out guidelines and runs a disciplined e-services process with roughly 5-working-day review cycles. It expects consultant-led submissions with existing/demolition/proposed sequences, and its communities add landlord-side technical conditions through TECOM management. Practically: faster and more predictable than DM for clean packages, less forgiving of improvisation.",
+        ],
+      },
+      {
+        heading: "Trakhees — the engineering heavyweight",
+        paragraphs: [
+          "Trakhees CED runs the most engineering-rigorous review of the three: registered-engineer stamping, HSE documentation read in earnest, staged inspections for bigger scopes, and a double gate in most of its territory because Nakheel's landlord NOC runs alongside. Palm Jumeirah F&B is the regime's final exam. Budget more time and more engineering — and get waterfront real estate in return.",
+        ],
+      },
+      {
+        heading: "What actually changes for your project",
+        bullets: [
+          "Registrations: your consultant and contractor must hold the specific authority's registration — check before appointing",
+          "Portals & formats: title blocks, drawing sequences and activity codes differ; native-looking packages review faster",
+          "Fees: same order of magnitude everywhere, different formulas — see our cost guide",
+          "Timelines: DDA fastest on clean packages, DM most variable with volume, Trakhees most thorough",
+          "Inspections: all inspect against approved drawings; Trakhees and DIFC most exactingly",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "My building is in Business Bay — DM or something else?",
+        a: "Business Bay is mainland: Dubai Municipality, plus your tower management's NOC. The confusion usually comes from towers with free-zone-sounding names — title, not branding, decides jurisdiction.",
+      },
+      {
+        q: "Can one consultant handle all jurisdictions?",
+        a: "Only if they genuinely hold the registrations and portal access for each — many claim, fewer do. Ask specifically which authorities they've submitted to in the last quarter. (Our answer: all of the above, weekly.)",
+      },
+      {
+        q: "Which jurisdiction is 'easiest'?",
+        a: "The one your package respects. Every regime moves quickly for complete, code-referenced, correctly-formatted submissions and slowly for the other kind. That said: clean DDA submissions enjoy the most predictable clock.",
+      },
+    ],
+    relatedGuides: ["fit-out-permit-process-dubai", "fit-out-permit-timeline-dubai", "fit-out-permit-cost-dubai"],
+  },
+  {
+    slug: "fit-out-permit-timeline-dubai",
+    name: "Fit-Out Permit Timelines in Dubai",
+    title: "How Long Does a Fit-Out Permit Take in Dubai? | 2026 Timelines",
+    metaDescription:
+      "Real fit-out permit timelines in Dubai for 2026: NOC, drawing, review and inspection durations by authority and project type — and where the weeks are actually won and lost.",
+    keywords: [
+      "fit out permit timeline",
+      "how long fit out approval dubai",
+      "dubai permit processing time",
+      "fit out approval duration",
+    ],
+    heroImage: {
+      folder: "process",
+      base: "site-survey",
+      alt: "Project timeline board tracking permit milestones for a Dubai fit-out",
+    },
+    intro: [
+      "The honest answer to 'how long does a fit-out permit take?' is a distribution, not a number — and the shape of that distribution is mostly in your control. Authority review clocks are the visible part; the invisible parts (consent chains, drawing quality, comment-response speed) decide whether your project sits at the fast or slow end.",
+      "Below are the durations we actually observe across jurisdictions and project types as of July 2026, and — more usefully — the specific places where weeks are won and lost.",
+    ],
+    sections: [
+      {
+        heading: "The baseline anatomy",
+        bullets: [
+          "Consent chain (landlord + building + developer NOCs): 3 days – 4 weeks — the most variable stage of all",
+          "Survey & permit-grade drawings: 1–2 weeks for standard commercial scopes",
+          "Authority review: ~5–10 working days per round; clean packages need one round",
+          "DCD parallel review: 5–10 working days, overlapping the main track",
+          "Inspections & completion certificate: 1–2 weeks after works complete",
+        ],
+      },
+      {
+        heading: "By project type (lease-to-legal-opening)",
+        bullets: [
+          "Standard office: 8–12 weeks including construction",
+          "Café, light menu: 6–10 weeks",
+          "Full restaurant: 10–16 weeks — kitchen approvals dominate",
+          "Clinic: 10–14 weeks with the DHA sequence run correctly",
+          "Retail in malls: 4–8 weeks to permit through design review, then works",
+          "Warehouse mezzanine: 3–6 weeks to permit, then fabrication",
+          "Villa extension: 6–10 weeks of approvals before construction",
+        ],
+      },
+      {
+        heading: "Where weeks are lost",
+        paragraphs: [
+          "Four failure modes account for most delay: consent chains started late (the landlord NOC should begin the day heads-of-terms agree); drawings inherited from wrong as-builts (every inherited error returns as a comment); slow comment responses (a comment answered in one day versus two weeks compounds across rounds); and works deviating from approved drawings (discovered at inspection, when everything is expensive).",
+        ],
+      },
+      {
+        heading: "Where weeks are won",
+        paragraphs: [
+          "Parallelism is the honest accelerant: DCD alongside the main permit, DEWA feasibility during design, signage started with the fit-out rather than after it, food-safety layout in the same package as the building permit. None of it requires favours — just a programme someone actually owns. That, and submitting clean: the fastest comment round is the one that never opens.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "Can permits be expedited officially?",
+        a: "Some authorities offer priority channels for specific transaction types, but the real expedite is structural: complete packages, instant comment turnaround and parallel tracks. 'Fast-track' promises that ignore those fundamentals are marketing.",
+      },
+      {
+        q: "What's the fastest realistic path for an office?",
+        a: "With a cooperative landlord and existing as-builts: NOC week one, drawings week two, submission week two, permit week three or four. We've done faster; we don't promise faster.",
+      },
+      {
+        q: "Does Ramadan / summer affect timelines?",
+        a: "Reduced working hours shift review cadence somewhat, and Q4 clusters renovation demand at developer NOC desks. Plan around the calendar, don't fight it.",
+      },
+    ],
+    relatedGuides: ["fit-out-permit-process-dubai", "common-rejection-reasons", "fit-out-permit-cost-dubai"],
+  },
+  {
+    slug: "common-rejection-reasons",
+    name: "Why Fit-Out Permits Get Rejected in Dubai",
+    title: "Fit-Out Permit Rejected? | Top Rejection Reasons in Dubai & Fixes",
+    metaDescription:
+      "The most common reasons Dubai fit-out permits and drawings get rejected — DM, DCD, DDA and free zones — and how each is prevented or fixed. From the approval-rescue desk at FitOutPermits.ae.",
+    keywords: [
+      "fit out permit rejected dubai",
+      "dubai municipality drawing comments",
+      "dcd rejection reasons",
+      "permit rejection dubai",
+    ],
+    heroImage: {
+      folder: "services",
+      base: "rescue",
+      alt: "Marked-up rejected drawing set with authority comment annotations awaiting resolution",
+    },
+    intro: [
+      "We run an approval-rescue desk, which means rejected applications arrive on our table weekly — and the same dozen causes account for nearly all of them. None are mysterious. Most are preventable at a cost of hours; all are fixable at a cost of weeks.",
+      "Here is the honest taxonomy: what actually gets rejected, why, and what prevention and cure each cause has. If your application is currently stuck, this list is probably describing it.",
+    ],
+    sections: [
+      {
+        heading: "Documentation failures (the avoidable third)",
+        bullets: [
+          "Missing building-management NOC — the single most common bounce in tower projects",
+          "Expired trade licence, Ejari or insurance mid-review",
+          "Contractor lacking the specific authority's registration or activity class",
+          "Wrong signatory: applications signed by someone without documented authority",
+        ],
+        paragraphs: [
+          "Prevention is a checklist run properly once. Cure is assembling the missing item and resubmitting — cheap, but each cycle costs a review round.",
+        ],
+      },
+      {
+        heading: "Drawing failures (the technical third)",
+        bullets: [
+          "Drawings based on wrong as-builts — every inherited error returns as a comment",
+          "Load schedules exceeding the building's electrical or cooling allocation",
+          "Missing existing/demolition/proposed sequence where the authority requires it",
+          "Uncoordinated disciplines: architectural and MEP sets that contradict each other",
+          "Code references to superseded editions of the fire and building codes",
+        ],
+        paragraphs: [
+          "Prevention is a fresh survey and a coordinated package. Cure is re-drawing — which is why the prevention is the bargain of the process.",
+        ],
+      },
+      {
+        heading: "Life-safety failures (the serious third)",
+        bullets: [
+          "Travel distances and dead-ends exceeding limits after new partitions",
+          "Sprinkler and detector layouts not recalculated for the new ceiling plan",
+          "Occupancy increases (class studios, dining areas) without exit-capacity math",
+          "Non-DCD-listed materials in fire-rated assemblies",
+          "Kitchen suppression missing or mismatched to the cooking line",
+        ],
+        paragraphs: [
+          "These are the rejections to be grateful for — the code is written in other cities' fire reports. Prevention is scoping the layout against egress rules before design freezes; cure is redesign, honestly done.",
+        ],
+      },
+      {
+        heading: "If you're currently rejected",
+        paragraphs: [
+          "Read the comments as a reviewer wrote them, not as a setback: they are a literal to-do list. Identify the real objection (occasionally politer than the stated one), answer each item technically, change nothing else silently, and resubmit fast — applications age badly in portals. Or hand it to our rescue desk: the autopsy is free, and third submissions we run tend to be final ones.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "Does a rejection put my project on a blacklist?",
+        a: "No — rejection is a routine review outcome, not a sanction. What damages projects is leaving comments unresolved for months or resubmitting the same package unchanged hoping for a different reviewer. The system rewards responsiveness.",
+      },
+      {
+        q: "How many comment rounds is normal?",
+        a: "One round on a professionally prepared package; two on complicated scopes. Three or more signals a package problem, not an authority problem — audit before resubmitting again.",
+      },
+      {
+        q: "Can you take over an application mid-rejection?",
+        a: "Yes — consultant/contractor reassignment is a standard authority process, and inherited rescues are a core service. Bring the comment sheets; we'll tell you within days what the real problem is and what fixing it costs.",
+      },
+    ],
+    relatedGuides: ["fit-out-permit-process-dubai", "fit-out-permit-documents-checklist", "fit-out-permit-timeline-dubai"],
+  },
+  {
+    slug: "completion-certificate-guide",
+    name: "Completion Certificates After Fit-Out",
+    title: "Completion Certificate After Fit-Out Dubai | Why It Matters & How",
+    metaDescription:
+      "The building completion certificate after a Dubai fit-out: why it's legally and financially essential, the inspection process, and how to obtain one — including years later. By FitOutPermits.ae.",
+    keywords: [
+      "completion certificate fit out",
+      "building completion certificate dubai",
+      "fit out inspection dubai",
+      "occupancy certificate dubai",
+    ],
+    heroImage: {
+      folder: "services",
+      base: "completion",
+      alt: "Building completion certificate being reviewed at a finished fit-out handover",
+    },
+    intro: [
+      "The completion certificate is the least glamorous document in a fit-out and the one that determines whether everything before it legally happened. It certifies that the works match the approved drawings and the space is fit to occupy — and its absence surfaces at the worst moments: licence renewals, insurance claims, lease disputes and property sales.",
+      "This guide covers what the certificate is, how the inspection process runs, and — because the market needs it — how to obtain one months or years after everyone went home.",
+    ],
+    sections: [
+      {
+        heading: "What it is and who needs it",
+        paragraphs: [
+          "Issued by your building authority (DM, Trakhees, DDA, the free zone) after final inspections — with Civil Defence clearance as a prerequisite where fire scope existed — the completion certificate closes the permit and certifies legal occupancy. Tenants need it for licence and lease compliance; landlords for re-letting and asset documentation; buyers and lenders check for it with increasing rigour.",
+        ],
+      },
+      {
+        heading: "The inspection process",
+        bullets: [
+          "Book final inspections once works genuinely match the approved drawings",
+          "DCD inspects fire and life safety first where in scope — its clearance feeds the authority",
+          "The authority inspects against the permit set; observations are issued in writing",
+          "Observations are corrected, evidence submitted, re-verification passed",
+          "Certificate issued; as-builts and test certificates complete the handover file",
+        ],
+      },
+      {
+        heading: "Why projects skip it (and why that's expensive)",
+        paragraphs: [
+          "The failure is structural: by inspection time the contractor is paid and demobilised, the tenant is trading, and nobody's contract clearly owns the paperwork. The unclosed permit then compounds quietly — renewals hit blocks, insurers find their excuse, deposits stay unrecovered, and the eventual retroactive closure costs more than the original would have. Assign closeout ownership in the contract, or to us.",
+        ],
+      },
+      {
+        heading: "Getting one retroactively",
+        paragraphs: [
+          "Retroactive completion is routine work: audit the permit trail, survey the as-built against what was approved, regularise deviations (amendments or corrective works), appoint a closure contractor if the original vanished, pass inspections, certificate issued. Timeline runs from two weeks (compliant, well-documented) to a few months (deviated, undocumented). The audit itself takes days and prices the rest honestly.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "Is the completion certificate the same as an occupancy certificate?",
+        a: "Terminology varies by authority, but for fit-outs the completion certificate is the document certifying the works are complete per approval and the space may be occupied. Whole-building occupancy certification is a separate, larger instrument.",
+      },
+      {
+        q: "We're trading without one. What's the actual risk?",
+        a: "Licence-renewal blocks, insurance-claim vulnerability, lease-dispute exposure and transaction friction if the business or property sells. Each is low-probability per month and high-cost when it lands — the classic case for cheap insurance, which retroactive closure is.",
+      },
+      {
+        q: "Who books the final inspection?",
+        a: "The registered consultant or contractor on the permit — one reason vanished contractors strand projects. Reassignment to a new registered party solves it; we do this constantly.",
+      },
+    ],
+    relatedGuides: ["fit-out-permit-process-dubai", "common-rejection-reasons", "landlord-noc-vs-authority-approval"],
+  },
+  {
+    slug: "landlord-noc-vs-authority-approval",
+    name: "Landlord NOC vs Authority Approval",
+    title: "Landlord NOC vs Authority Approval Dubai | What's the Difference?",
+    metaDescription:
+      "Landlord NOCs, developer NOCs and government permits in Dubai fit-outs: what each consent is, the order they come in, and why having one never substitutes for another. By FitOutPermits.ae.",
+    keywords: [
+      "landlord noc fit out",
+      "noc vs permit dubai",
+      "building noc dubai",
+      "developer noc fit out",
+    ],
+    heroImage: {
+      folder: "services",
+      base: "noc",
+      alt: "Stack of consent documents — landlord NOC, developer NOC and authority permit — side by side",
+    },
+    intro: [
+      "'The landlord already approved it' might be the most expensive sentence in Dubai fit-outs — usually spoken just before unpermitted work starts. Landlord consent and government approval are different instruments from different parties protecting different interests, and every fit-out needs its full chain, in order.",
+      "This guide untangles the three consent layers — landlord/building, master developer, government authority — and the sequence that makes them move fastest.",
+    ],
+    sections: [
+      {
+        heading: "Layer 1 — Landlord & building management (private consent)",
+        paragraphs: [
+          "The landlord's NOC is the property owner permitting changes to their asset; building management adds technical conditions — working hours, deposits, insurance minimums, contractor registration, protection requirements. This layer is contractual, not statutory: it can be stricter than the law (and in premium towers, is) but can never substitute for it. No authority reviews an application without it attached.",
+        ],
+      },
+      {
+        heading: "Layer 2 — Master developer (community consent)",
+        paragraphs: [
+          "In Emaar, Nakheel, Meraas and similar master communities, the developer's modification NOC enforces community design guidelines: setbacks, heights, external appearance, acoustic rules in towers. It sits between the landlord layer and the government layer, and for villa works it's frequently the longest-lead consent of the three. Freehold ownership does not exempt you — the guidelines travel with the title.",
+        ],
+      },
+      {
+        heading: "Layer 3 — Government authority (statutory approval)",
+        paragraphs: [
+          "The permit from DM, Trakhees, DDA, DIFC or your free zone is the state authorising the works themselves — reviewed against building codes, fire codes and planning rules by licensed engineers, enforced by inspection, and closed by a completion certificate. It is the only layer that makes construction lawful. Private consents are prerequisites for it, never replacements.",
+        ],
+      },
+      {
+        heading: "The sequence that works",
+        bullets: [
+          "Start the landlord/building NOC the day commercial terms agree — it gates everything",
+          "In master communities, run the developer NOC immediately after (or parallel where allowed)",
+          "Prepare permit drawings while consents process — the tracks overlap well",
+          "Submit to the authority with the full consent chain attached",
+          "At completion, close conditions in reverse: authority certificate, developer sign-off, deposit recovery",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "The landlord approved — can strip-out at least start?",
+        a: "Strip-out is works: in most jurisdictions it needs the permit (or a specific demolition/strip-out permit) too. Some buildings allow soft strip-out under their own supervision — get that in writing from building management, and know it doesn't extend one millimetre past what it says.",
+      },
+      {
+        q: "Can a landlord refuse an NOC arbitrarily?",
+        a: "Leases govern this — most give landlords broad discretion over alterations, which is why fit-out expectations belong in lease negotiations, not after signature. Practically, complete professional applications with clear reinstatement undertakings get consents that vague requests don't.",
+      },
+      {
+        q: "Who chases all these consents in a normal project?",
+        a: "Contractually it lands on the tenant, who typically delegates to whoever seems willing. Making it a defined, owned scope — ours — is the single most reliable schedule improvement available in Dubai fit-outs.",
+      },
+    ],
+    relatedGuides: ["fit-out-permit-documents-checklist", "fit-out-permit-process-dubai", "completion-certificate-guide"],
+  },
+];
+
+export function guideBySlug(slug: string) {
+  return GUIDES.find((g) => g.slug === slug);
+}

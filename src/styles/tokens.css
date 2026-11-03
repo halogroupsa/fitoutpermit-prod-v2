@@ -1,0 +1,129 @@
+/* fitoutpermits.ae — design tokens
+ * macrostructure: The Permit Dossier · tone: precise, institutional-modern, document-grade
+ * display: Land Rover Web · sans: Manrope · mono: ui-monospace (annotations)
+ * palette from the brand logo: bone paper · near-black ink · seal gold accent
+ * squared corners everywhere — a permit is a document, not a bubble.
+ */
+
+:root {
+  /* === Colour tokens === */
+
+  /* Paper — crisp bone / archival document white */
+  --color-paper: #f8f6f1;
+  --color-paper-warm: #f1ecdf;
+  --color-paper-deep: #e5ddc9;
+
+  /* Ink — dense black-brown, like fresh toner */
+  --color-ink: #16130e;
+  --color-ink-soft: #3c372e;
+  --color-ink-mute: #7b7466;
+
+  /* Carbon — dark dossier panels / heroes */
+  --color-carbon: #14100a;
+  --color-carbon-deep: #0b0804;
+
+  /* Accent — seal gold, sampled from the logo checkmark */
+  --color-accent: #b3862f;
+  --color-accent-soft: #d8bc7c;
+  --color-accent-deep: #7f5e1e;
+
+  /* Steel — muted drawing-board blue for technical annotations */
+  --color-steel: #4d6072;
+  --color-steel-soft: #cdd6dd;
+
+  /* Approved — a restrained stamp green, used only for "cleared" states */
+  --color-approve: #3e6b4f;
+  --color-approve-soft: #d7e3da;
+
+  /* Rules & focus */
+  --color-rule: #e0d9c8;
+  --color-rule-strong: #c8bda2;
+  --color-focus: #b3862f;
+
+  /* RGB channel mirrors — consumed by Tailwind so opacity modifiers
+     (bg-paper/92, border-paper/15, text-paper/70 …) resolve correctly.
+     Keep these in sync with the hex tokens above. */
+  --color-paper-rgb: 248 246 241;
+  --color-paper-warm-rgb: 241 236 223;
+  --color-paper-deep-rgb: 229 221 201;
+  --color-ink-rgb: 22 19 14;
+  --color-ink-soft-rgb: 60 55 46;
+  --color-ink-mute-rgb: 123 116 102;
+  --color-carbon-rgb: 20 16 10;
+  --color-carbon-deep-rgb: 11 8 4;
+  --color-accent-rgb: 179 134 47;
+  --color-accent-soft-rgb: 216 188 124;
+  --color-accent-deep-rgb: 127 94 30;
+  --color-steel-rgb: 77 96 114;
+  --color-steel-soft-rgb: 205 214 221;
+  --color-approve-rgb: 62 107 79;
+  --color-approve-soft-rgb: 215 227 218;
+  --color-rule-rgb: 224 217 200;
+  --color-rule-strong-rgb: 200 189 162;
+
+  /* Gradients — photographic vignettes only, never decorative color washes */
+  --gradient-hero-vignette: radial-gradient(120% 90% at 50% 30%, rgba(0,0,0,0.06) 0%, rgba(0,0,0,0.45) 58%, rgba(0,0,0,0.84) 100%);
+  --gradient-hero-left: linear-gradient(90deg, rgba(0,0,0,0.82) 0%, rgba(0,0,0,0.55) 32%, rgba(0,0,0,0.18) 62%, rgba(0,0,0,0) 82%);
+  --gradient-carbon-fade: linear-gradient(to top, rgba(11,8,4,0.92), rgba(11,8,4,0.35) 55%, rgba(11,8,4,0.08));
+
+  /* === Spacing (4pt scale) === */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.25rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-20: 5rem;
+  --space-24: 6rem;
+
+  /* Section + gutter — fluid clamps */
+  --space-gutter: clamp(1.25rem, 0.8rem + 2vw, 2.75rem);
+  --space-section: clamp(4rem, 2.75rem + 4.5vw, 8.25rem);
+
+  /* === Type === */
+  --font-display: "Land Rover Web", "Helvetica Neue", Arial, sans-serif;
+  --font-sans: "Manrope", "Inter", system-ui, sans-serif;
+  --font-mono: ui-monospace, "SFMono-Regular", "Menlo", monospace;
+
+  /* Canonical type scale — the ONLY font sizes in the project.
+     Fixed steps are rem-based; display steps are fluid clamps.
+     2xs is the legibility floor (11px) for tracked mono annotations. */
+  --text-2xs: 0.6875rem; /* 11px — micro mono annotation (stamps, indices) */
+  --text-xs: 0.75rem;    /* 12px — mono labels, eyebrows, breadcrumbs */
+  --text-sm: 0.875rem;   /* 14px — secondary body, captions, buttons */
+  --text-base: 1rem;     /* 16px — body copy */
+  --text-lg: clamp(1.05rem, 1rem + 0.25vw, 1.175rem); /* lead / card titles */
+  --text-xl: clamp(1.2rem, 1.07rem + 0.62vw, 1.5rem);
+  --text-2xl: clamp(1.4rem, 1.17rem + 1.15vw, 2rem);
+  --text-3xl: clamp(1.5rem, 1.22rem + 1.3vw, 2.2rem);
+  --text-4xl: clamp(2.05rem, 1.45rem + 2.8vw, 3.65rem);
+  --text-display: clamp(2.4rem, 1.4rem + 4.8vw, 5.7rem);
+  /* Hero — editorial restraint, must survive 10-inch laptops and phones */
+  --text-hero: clamp(1.9rem, 1.28rem + 2.25vw, 3.4rem);
+
+  /* === Motion === */
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-in: cubic-bezier(0.55, 0, 0.55, 0.2);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --dur-fast: 160ms;
+  --dur-base: 280ms;
+  --dur-slow: 460ms;
+  --dur-slower: 720ms;
+
+  /* === Radius === */
+  /* Documents have square corners. No rounding anywhere. */
+  --radius-xs: 0;
+  --radius-sm: 0;
+  --radius-md: 0;
+  --radius-lg: 0;
+  --radius-xl: 0;
+
+  /* === Layout === */
+  --container-max: 1400px;
+  --container-wide: 1680px;
+  --header-h: clamp(4rem, 3.2rem + 1.5vw, 4.9rem);
+}

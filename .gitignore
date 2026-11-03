@@ -1,0 +1,47 @@
+# Dependencies
+node_modules/
+
+# Next.js build output
+.next/
+out/
+
+# Production builds and test coverage
+build/
+dist/
+coverage/
+
+# Local environment files (commit an explicit example file if needed)
+.env
+.env.*
+!.env.example
+
+# Vercel
+.vercel/
+
+# Cloudflare Wrangler
+.wrangler/
+
+# TypeScript and tool caches
+*.tsbuildinfo
+.eslintcache
+.cache/
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Local certificates
+*.pem
+
+# OS and editor files
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+.idea/
+.vscode/
+
+keywords_planner

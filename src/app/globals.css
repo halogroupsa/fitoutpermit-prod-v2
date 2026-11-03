@@ -1,0 +1,1115 @@
+@import "../styles/tokens.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ===================== Fonts ===================== */
+@font-face {
+  font-family: "Land Rover Web";
+  src: url("/fonts/landroverweb_bold.ttf") format("truetype");
+  /* Only a bold cut ships; a wide weight range stops headings that ask for 400
+     from falling back to the system stack. */
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Manrope";
+  src: url("/fonts/manrope_web/manrope-light.woff2") format("woff2"),
+    url("/fonts/manrope_web/manrope-light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Manrope";
+  src: url("/fonts/manrope_web/manrope-regular.woff2") format("woff2"),
+    url("/fonts/manrope_web/manrope-regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Manrope";
+  src: url("/fonts/manrope_web/manrope-medium.woff2") format("woff2"),
+    url("/fonts/manrope_web/manrope-medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Manrope";
+  src: url("/fonts/manrope_web/manrope-semibold.woff2") format("woff2"),
+    url("/fonts/manrope_web/manrope-semibold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Manrope";
+  src: url("/fonts/manrope_web/manrope-bold.woff2") format("woff2"),
+    url("/fonts/manrope_web/manrope-bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Manrope";
+  src: url("/fonts/manrope_web/manrope-extrabold.woff2") format("woff2"),
+    url("/fonts/manrope_web/manrope-extrabold.woff") format("woff");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ===================== Base ===================== */
+@layer base {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+    border-color: var(--color-rule);
+  }
+
+  html {
+    font-size: 100%;
+    -webkit-text-size-adjust: 100%;
+    overflow-x: clip;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--color-paper);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    font-weight: 400;
+    font-feature-settings: "kern", "liga";
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    line-height: 1.62;
+    overflow-x: clip;
+    min-height: 100dvh;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+    font-weight: 700;
+    color: var(--color-ink);
+    line-height: 1.06;
+    letter-spacing: -0.01em;
+    overflow-wrap: anywhere;
+    min-width: 0;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+    transition: color var(--dur-base) var(--ease-out);
+  }
+
+  button {
+    font-family: inherit;
+    cursor: pointer;
+  }
+
+  ::selection {
+    background-color: var(--color-accent);
+    color: var(--color-paper);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-focus);
+    outline-offset: 3px;
+    border-radius: 0;
+  }
+
+  img, video {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+/* ===================== Components ===================== */
+@layer components {
+  .container-page {
+    max-width: var(--container-max);
+    margin-inline: auto;
+    padding-inline: var(--space-gutter);
+  }
+  .container-wide {
+    max-width: var(--container-wide);
+    margin-inline: auto;
+    padding-inline: var(--space-gutter);
+  }
+  .container-prose {
+    max-width: 72ch;
+    margin-inline: auto;
+    padding-inline: var(--space-gutter);
+  }
+
+  .section {
+    padding-block: var(--space-section);
+  }
+  .section-sm {
+    padding-block: clamp(2.5rem, 1.5rem + 3vw, 5rem);
+  }
+
+  /* Homepage positioning — an opened permit file, not a generic service grid.
+     Two offset images make the desk feel active: drawings becoming an inspection. */
+  .approval-desk {
+    background: var(--color-paper-warm);
+    overflow: clip;
+  }
+  .approval-desk-points {
+    display: grid;
+    gap: 1.15rem;
+  }
+  .approval-desk-points li {
+    display: grid;
+    grid-template-columns: 1.25rem 1fr;
+    gap: 0.65rem;
+    align-items: start;
+    font-size: var(--text-sm);
+    line-height: 1.55;
+    color: var(--color-ink-soft);
+  }
+  .approval-desk-points li > svg {
+    margin-top: 0.3rem;
+    color: var(--color-accent-deep);
+  }
+  .approval-desk-points strong,
+  .approval-desk-points span > span {
+    display: block;
+  }
+  .approval-desk-points strong {
+    font-family: var(--font-display);
+    color: var(--color-ink);
+    font-size: var(--text-lg);
+    line-height: 1.25;
+  }
+  .approval-desk-points span > span { margin-top: 0.375rem; }
+  .approval-desk-visual {
+    position: relative;
+    min-height: clamp(28rem, 38vw, 39rem);
+    isolation: isolate;
+  }
+  .approval-desk-landscape {
+    position: absolute;
+    inset: 4% 1% 5% 7%;
+    border: 1px solid var(--color-rule-strong);
+    background-image:
+      radial-gradient(ellipse 78% 42% at 16% 104%, transparent 68%, rgb(var(--color-accent-rgb) / 0.16) 68.5%, transparent 69.2%),
+      radial-gradient(ellipse 88% 48% at 80% 108%, transparent 68%, rgb(var(--color-accent-rgb) / 0.12) 68.5%, transparent 69.2%),
+      linear-gradient(145deg, rgb(var(--color-accent-rgb) / 0.055), transparent 62%);
+  }
+  .approval-desk-main,
+  .approval-desk-inspection {
+    position: absolute;
+    z-index: 1;
+    border: 8px solid var(--color-paper);
+    box-shadow: 0 13px 30px rgb(var(--color-ink-rgb) / 0.14);
+  }
+  .approval-desk-main {
+    inset: 0 15% 8% 0;
+    clip-path: polygon(0 0, 100% 0, 100% 86%, 83% 100%, 0 100%);
+  }
+  .approval-desk-main .c-smart-image { height: 100%; }
+  .approval-desk-main img { object-position: 48% 48%; }
+  .approval-desk-inspection {
+    right: 0;
+    bottom: 0;
+    width: 35%;
+    height: 58%;
+    border-width: 7px;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 17% 100%, 0 84%);
+  }
+  .approval-desk-inspection .c-smart-image { height: 100%; }
+  .approval-desk-inspection img { object-position: 56% center; }
+  .approval-desk-file {
+    position: absolute;
+    z-index: 2;
+    top: 9%;
+    right: 4%;
+    display: grid;
+    width: min(12rem, 33%);
+    padding: 0.9rem 1rem;
+    border-left: 3px solid var(--color-accent);
+    background: var(--color-carbon);
+    color: var(--color-paper);
+    box-shadow: 0 9px 20px rgb(var(--color-ink-rgb) / 0.16);
+  }
+  .approval-desk-file span,
+  .approval-desk-file em,
+  .approval-desk-seal span {
+    font-family: var(--font-mono);
+    font-size: var(--text-2xs);
+    font-style: normal;
+    letter-spacing: 0.1em;
+    line-height: 1.5;
+    text-transform: uppercase;
+  }
+  .approval-desk-file strong {
+    margin: 0.25rem 0 0.05rem;
+    font-family: var(--font-display);
+    font-size: var(--text-2xl);
+    line-height: 1;
+    color: var(--color-accent-soft);
+  }
+  .approval-desk-file em { color: rgb(var(--color-paper-rgb) / 0.65); }
+  .approval-desk-seal {
+    position: absolute;
+    z-index: 2;
+    bottom: 5%;
+    left: -1rem;
+    display: grid;
+    gap: 0.15rem;
+    max-width: 10rem;
+    padding: 0.7rem 0.85rem;
+    border: 1px solid var(--color-accent-deep);
+    background: rgb(var(--color-paper-rgb) / 0.92);
+    color: var(--color-accent-deep);
+    transform: rotate(-4deg);
+  }
+  .approval-desk-seal strong {
+    font-family: var(--font-display);
+    font-size: var(--text-lg);
+    line-height: 1;
+    text-transform: uppercase;
+  }
+  /* Scroll-linked parallax: the two badges drift in opposite directions as the
+     visual passes through the viewport, giving the composition depth. Pure CSS
+     scroll-driven animation — falls back to static badges where unsupported. */
+  @media (min-width: 1024px) and (prefers-reduced-motion: no-preference) {
+    @supports (animation-timeline: view()) {
+      .approval-desk-file {
+        animation: approval-desk-file-drift linear both;
+        animation-timeline: view();
+        will-change: transform;
+      }
+      .approval-desk-seal {
+        animation: approval-desk-seal-drift linear both;
+        animation-timeline: view();
+        will-change: transform;
+      }
+    }
+  }
+  @keyframes approval-desk-file-drift {
+    from { transform: translateY(2.75rem); }
+    to { transform: translateY(-2.75rem); }
+  }
+  @keyframes approval-desk-seal-drift {
+    from { transform: rotate(-4deg) translateY(-2.75rem); }
+    to { transform: rotate(-4deg) translateY(2.75rem); }
+  }
+  @media (max-width: 1023px) {
+    .approval-desk-visual { max-width: 44rem; }
+  }
+  @media (max-width: 480px) {
+    .approval-desk-visual { min-height: 25rem; }
+    .approval-desk-main { inset: 0 11% 11% 0; border-width: 5px; }
+    .approval-desk-inspection { width: 40%; height: 54%; border-width: 5px; }
+    .approval-desk-file { top: 5%; right: 0; width: 39%; padding: 0.6rem 0.65rem; }
+    .approval-desk-seal { bottom: 1%; left: 0; transform: rotate(-3deg) scale(0.9); transform-origin: bottom left; }
+  }
+
+  /* Homepage build time-lapse — the approval-to-handover film, mounted like a
+     drawing sheet on a dark dossier board. Playback runs only while the section
+     is in view; the phase rail is synced to the video and seeks on click. */
+  .build-timelapse {
+    background-color: var(--color-carbon);
+    background-image: radial-gradient(
+      110% 130% at 85% 0%,
+      rgb(var(--color-carbon-deep-rgb) / 0) 0%,
+      rgb(var(--color-carbon-deep-rgb) / 0.85) 100%
+    );
+  }
+
+  .build-frame {
+    border: 1px solid rgb(var(--color-paper-rgb) / 0.22);
+    background: var(--color-carbon-deep);
+  }
+  /* Pin the film to the viewport while the phase rail scrolls past it. The frame
+     spans both rows, so align-self: start keeps it at its natural height, leaving
+     slack inside the grid area for the sticky travel. Offset clears the header. */
+  @media (min-width: 1024px) {
+    .build-frame {
+      position: sticky;
+      top: calc(var(--header-h) + 1.5rem);
+      align-self: start;
+    }
+  }
+  .build-frame-head,
+  .build-frame-foot {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 0.65rem 0.9rem;
+    font-family: var(--font-mono);
+    font-size: var(--text-2xs);
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: rgb(var(--color-paper-rgb) / 0.55);
+  }
+  .build-frame-head {
+    border-bottom: 1px solid rgb(var(--color-paper-rgb) / 0.16);
+  }
+  .build-frame-foot {
+    border-top: 1px solid rgb(var(--color-paper-rgb) / 0.16);
+  }
+  .build-frame-stage {
+    position: relative;
+  }
+  .build-video {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+  }
+  .build-play {
+    position: absolute;
+    right: 0.75rem;
+    bottom: 0.75rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.25rem;
+    height: 2.25rem;
+    border: 1px solid rgb(var(--color-paper-rgb) / 0.4);
+    background: rgb(var(--color-carbon-deep-rgb) / 0.72);
+    color: var(--color-paper);
+    transition: background-color var(--dur-base) var(--ease-out),
+      border-color var(--dur-base) var(--ease-out);
+  }
+  .build-play:hover {
+    background: var(--color-accent-deep);
+    border-color: var(--color-accent);
+  }
+  .build-frame-stamp {
+    padding: 0.2rem 0.55rem;
+    border: 1px solid var(--color-accent);
+    color: var(--color-accent-soft);
+    font-weight: 600;
+    transform: rotate(-3deg);
+  }
+  .build-frame-phase {
+    color: var(--color-accent-soft);
+    text-align: right;
+    white-space: nowrap;
+  }
+  .build-progress {
+    position: relative;
+    flex: 1;
+    height: 2px;
+    background: rgb(var(--color-paper-rgb) / 0.18);
+    overflow: hidden;
+  }
+  .build-progress > span {
+    position: absolute;
+    inset: 0;
+    background: var(--color-accent);
+    transform-origin: left center;
+    transform: scaleX(0);
+    transition: transform 140ms linear;
+  }
+
+  .build-phases {
+    max-width: 34rem;
+    border-bottom: 1px solid rgb(var(--color-paper-rgb) / 0.14);
+  }
+  .build-phase {
+    display: grid;
+    grid-template-columns: 2.6rem 1fr;
+    gap: 0.9rem;
+    width: 100%;
+    padding: 0.95rem 0.65rem;
+    border-top: 1px solid rgb(var(--color-paper-rgb) / 0.14);
+    text-align: left;
+    color: rgb(var(--color-paper-rgb) / 0.45);
+    transition: color var(--dur-base) var(--ease-out),
+      background-color var(--dur-base) var(--ease-out);
+  }
+  .build-phase:hover {
+    color: rgb(var(--color-paper-rgb) / 0.75);
+  }
+  .build-phase-no {
+    font-family: var(--font-mono);
+    font-size: var(--text-xs);
+    letter-spacing: 0.14em;
+    padding-top: 0.2rem;
+  }
+  .build-phase strong {
+    display: block;
+    font-family: var(--font-display);
+    font-size: var(--text-lg);
+    line-height: 1.3;
+    color: inherit;
+  }
+  .build-phase > span + span,
+  .build-phase strong + span {
+    display: block;
+    margin-top: 0.3rem;
+    font-size: var(--text-sm);
+    line-height: 1.55;
+  }
+  .build-phase.is-active {
+    color: rgb(var(--color-paper-rgb) / 0.78);
+    background: rgb(var(--color-paper-rgb) / 0.05);
+    box-shadow: inset 2px 0 0 var(--color-accent);
+  }
+  .build-phase.is-active strong,
+  .build-phase.is-active .build-phase-no {
+    color: var(--color-accent-soft);
+  }
+
+  /* Homepage approval-rescue strip — a fixed, full-bleed workdesk photograph.
+     The overlay preserves copy contrast as the image remains fixed while scrolling. */
+  .home-rescue {
+    background-color: var(--color-carbon-deep);
+    background-image:
+      linear-gradient(90deg, rgb(var(--color-carbon-deep-rgb) / 0.88) 0%, rgb(var(--color-carbon-deep-rgb) / 0.76) 52%, rgb(var(--color-carbon-deep-rgb) / 0.58) 100%),
+      url("/img/services/home-rescue-1200.webp");
+    background-position: center, center right;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+  .home-rescue-content {
+    min-height: clamp(22rem, 26vw, 30rem);
+    display: flex;
+    align-items: center;
+  }
+  .home-rescue-content > .reveal {
+    width: 100%;
+  }
+  @media (min-width: 768px) {
+    .home-rescue {
+      background-image:
+        linear-gradient(90deg, rgb(var(--color-carbon-deep-rgb) / 0.88) 0%, rgb(var(--color-carbon-deep-rgb) / 0.76) 52%, rgb(var(--color-carbon-deep-rgb) / 0.58) 100%),
+        url("/img/services/home-rescue-1600.webp");
+    }
+  }
+  /* Fixed attachment is not consistently supported by mobile browsers; retain
+     the visual treatment without creating a jarring scroll/repaint issue. */
+  @media (max-width: 767px), (prefers-reduced-motion: reduce) {
+    .home-rescue {
+      background-attachment: scroll;
+      background-position: center, 68% center;
+    }
+  }
+
+  /* Homepage project types — a fixed fit-out scene adds the same depth as the
+     rescue strip while the warm paper wash keeps the index and cards legible. */
+  .home-project-types {
+    background-color: var(--color-paper-warm);
+    background-image:
+      linear-gradient(rgb(var(--color-paper-rgb) / 0.9), rgb(var(--color-paper-rgb) / 0.9)),
+      url("/img/projects/office-1200.webp");
+    background-position: center, center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+  @media (min-width: 768px) {
+    .home-project-types {
+      background-image:
+        linear-gradient(rgb(var(--color-paper-rgb) / 0.9), rgb(var(--color-paper-rgb) / 0.9)),
+        url("/img/projects/office-1600.webp");
+    }
+  }
+  @media (max-width: 767px), (prefers-reduced-motion: reduce) {
+    .home-project-types {
+      background-attachment: scroll;
+      background-position: center, 60% center;
+    }
+  }
+
+  /* Shared closing CTA — fixed rooftop/site scene, with a quiet center so the
+     call to action stays clear above the footer on every page. */
+  .section-cta-band {
+    background-color: var(--color-carbon);
+    background-image:
+      linear-gradient(rgb(var(--color-carbon-deep-rgb) / 0.56), rgb(var(--color-carbon-deep-rgb) / 0.56)),
+      url("/img/cta/cta-band-1200.webp");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+  @media (min-width: 768px) {
+    .section-cta-band {
+      background-image:
+        linear-gradient(rgb(var(--color-carbon-deep-rgb) / 0.56), rgb(var(--color-carbon-deep-rgb) / 0.56)),
+        url("/img/cta/cta-band-1600.webp");
+    }
+  }
+  @media (max-width: 767px), (prefers-reduced-motion: reduce) {
+    .section-cta-band {
+      background-attachment: scroll;
+      background-position: center 58%;
+    }
+  }
+
+  /* Approvals index — the registry opens as a dark filing-room band over a
+     fixed Business Bay skyline, echoing the home page's parallax strips. */
+  .approvals-registry {
+    background-color: var(--color-carbon-deep);
+    background-image:
+      linear-gradient(100deg, rgb(var(--color-carbon-deep-rgb) / 0.94) 0%, rgb(var(--color-carbon-deep-rgb) / 0.84) 52%, rgb(var(--color-carbon-deep-rgb) / 0.62) 100%),
+      url("/img/jurisdictions/business-bay-1200.webp");
+    background-position: center, center 32%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+  @media (min-width: 768px) {
+    .approvals-registry {
+      background-image:
+        linear-gradient(100deg, rgb(var(--color-carbon-deep-rgb) / 0.94) 0%, rgb(var(--color-carbon-deep-rgb) / 0.84) 52%, rgb(var(--color-carbon-deep-rgb) / 0.62) 100%),
+        url("/img/jurisdictions/business-bay-1600.webp");
+    }
+  }
+  @media (max-width: 767px), (prefers-reduced-motion: reduce) {
+    .approvals-registry {
+      background-attachment: scroll;
+      background-position: center, 62% center;
+    }
+  }
+
+  /* Services index — the white-label desk band, same fixed treatment as the
+     home rescue strip so the services page inherits the parallax rhythm. */
+  .services-whitelabel {
+    background-color: var(--color-carbon-deep);
+    background-image:
+      linear-gradient(90deg, rgb(var(--color-carbon-deep-rgb) / 0.9) 0%, rgb(var(--color-carbon-deep-rgb) / 0.78) 50%, rgb(var(--color-carbon-deep-rgb) / 0.56) 100%),
+      url("/img/services/white-label-1200.webp");
+    background-position: center, center right;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+  @media (min-width: 768px) {
+    .services-whitelabel {
+      background-image:
+        linear-gradient(90deg, rgb(var(--color-carbon-deep-rgb) / 0.9) 0%, rgb(var(--color-carbon-deep-rgb) / 0.78) 50%, rgb(var(--color-carbon-deep-rgb) / 0.56) 100%),
+        url("/img/services/white-label-1600.webp");
+    }
+  }
+  @media (max-width: 767px), (prefers-reduced-motion: reduce) {
+    .services-whitelabel {
+      background-attachment: scroll;
+      background-position: center, 70% center;
+    }
+  }
+
+  /* Monospace filing label — the dossier annotation voice */
+  .eyebrow {
+    font-family: var(--font-mono);
+    font-size: var(--text-xs);
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--color-accent-deep);
+  }
+  .eyebrow-on-dark {
+    color: var(--color-accent-soft);
+  }
+
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    background-color: var(--color-ink);
+    color: var(--color-paper);
+    padding: 0.9rem 1.75rem;
+    font-size: var(--text-sm);
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    transition: background-color var(--dur-base) var(--ease-out),
+      color var(--dur-base) var(--ease-out);
+  }
+  .btn-primary:hover {
+    background-color: var(--color-accent);
+    color: var(--color-paper);
+  }
+
+  .btn-gold {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    background-color: var(--color-accent);
+    color: var(--color-paper);
+    padding: 0.9rem 1.75rem;
+    font-size: var(--text-sm);
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    transition: background-color var(--dur-base) var(--ease-out);
+  }
+  .btn-gold:hover {
+    background-color: var(--color-accent-deep);
+  }
+
+  .btn-outline {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    border: 1px solid var(--color-rule-strong);
+    color: var(--color-ink);
+    padding: 0.85rem 1.7rem;
+    font-size: var(--text-sm);
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    transition: border-color var(--dur-base) var(--ease-out),
+      color var(--dur-base) var(--ease-out),
+      background-color var(--dur-base) var(--ease-out);
+  }
+  .btn-outline:hover {
+    border-color: var(--color-accent);
+    color: var(--color-accent-deep);
+  }
+  .btn-outline-on-dark {
+    border-color: rgb(var(--color-paper-rgb) / 0.35);
+    color: var(--color-paper);
+  }
+  .btn-outline-on-dark:hover {
+    border-color: var(--color-accent-soft);
+    color: var(--color-accent-soft);
+  }
+
+  /* Ledger row — hairline-separated list rows, the site's core list idiom */
+  .ledger-row {
+    display: grid;
+    border-top: 1px solid var(--color-rule);
+    padding-block: 1.1rem;
+  }
+  .ledger-row:last-child {
+    border-bottom: 1px solid var(--color-rule);
+  }
+  /* In the two-column guides grid, the left column's bottom row is the
+     second-to-last child, so give it a bottom border to match. */
+  @media (min-width: 768px) {
+    .home-guides-grid .ledger-row:nth-last-child(2) {
+      border-bottom: 1px solid var(--color-rule);
+    }
+  }
+
+  /* Dossier card — bordered document panel */
+  .dossier-card {
+    border: 1px solid var(--color-rule);
+    background-color: rgb(var(--color-paper-rgb));
+    transition: border-color var(--dur-base) var(--ease-out),
+      transform var(--dur-base) var(--ease-out),
+      box-shadow var(--dur-base) var(--ease-out);
+  }
+  .dossier-card:hover {
+    border-color: var(--color-rule-strong);
+    box-shadow: 0 1px 0 var(--color-rule-strong), 6px 6px 0 rgb(var(--color-ink-rgb) / 0.05);
+  }
+
+  /* Rubber-stamp mark — used for the APPROVED motif */
+  .stamp {
+    font-family: var(--font-mono);
+    font-weight: 700;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    border: 2px solid currentColor;
+    padding: 0.35rem 0.9rem;
+    display: inline-block;
+    transform: rotate(-4deg);
+  }
+
+  /* Reference number — faded mono index, e.g. "REF 01" */
+  .ref-no {
+    font-family: var(--font-mono);
+    font-size: var(--text-xs);
+    letter-spacing: 0.14em;
+    color: var(--color-ink-mute);
+  }
+
+  /* Image reveal fade for SmartImage */
+  .img-fade-in {
+    opacity: 0;
+    transition: opacity 640ms var(--ease-out);
+  }
+  .img-fade-in.is-loaded {
+    opacity: 1;
+  }
+  .c-smart-image {
+    position: relative;
+    overflow: hidden;
+    background-color: var(--color-paper-deep);
+  }
+
+  /* Scroll reveal (activated by RevealOnScroll observer) */
+  .reveal {
+    opacity: 0;
+    transform: translateY(22px);
+    transition: opacity 700ms var(--ease-out), transform 700ms var(--ease-out);
+  }
+  .reveal.is-visible {
+    opacity: 1;
+    transform: none;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .reveal {
+      opacity: 1;
+      transform: none;
+    }
+  }
+
+  /* Shared desert contour — broad dune arcs replace the former square grid. */
+  .desert-contours {
+    background-image:
+      radial-gradient(ellipse 80% 38% at 8% 108%, transparent 68%, rgb(var(--color-accent-rgb) / 0.13) 68.5%, transparent 69.2%),
+      radial-gradient(ellipse 94% 46% at 86% 112%, transparent 68%, rgb(var(--color-accent-rgb) / 0.1) 68.5%, transparent 69.2%),
+      linear-gradient(128deg, rgb(var(--color-accent-rgb) / 0.04), transparent 68%);
+  }
+
+  /* Jurisdiction result — quiet dune contours replace the technical grid and
+     echo Dubai's landscape without competing with the authority details. */
+  .jurisdiction-desert {
+    isolation: isolate;
+    background-image: linear-gradient(
+      112deg,
+      rgb(var(--color-paper-rgb) / 0.08),
+      rgb(var(--color-accent-rgb) / 0.045) 72%,
+      transparent
+    );
+  }
+  .jurisdiction-desert-lines {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    fill: none;
+    stroke: rgb(var(--color-accent-rgb) / 0.16);
+    stroke-width: 1.35;
+    vector-effect: non-scaling-stroke;
+    pointer-events: none;
+  }
+  .jurisdiction-desert-lines path:nth-child(2) { opacity: 0.72; }
+  .jurisdiction-desert-lines path:nth-child(3) { opacity: 0.42; }
+  .jurisdiction-desert-lines path:nth-child(4) { opacity: 0.55; }
+
+  /* Marquee */
+  .marquee-track {
+    display: flex;
+    width: max-content;
+    animation: marquee 38s linear infinite;
+  }
+  .marquee-track:hover {
+    animation-play-state: paused;
+  }
+  .marquee-track--slow {
+    animation-duration: 54s;
+  }
+  /* Second row of a paired marquee — drifts the opposite way. */
+  .marquee-track--reverse {
+    animation-name: marquee-reverse;
+  }
+  @keyframes marquee {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+  @keyframes marquee-reverse {
+    from { transform: translateX(-50%); }
+    to { transform: translateX(0); }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .marquee-track {
+      animation: none;
+      flex-wrap: wrap;
+      width: 100%;
+      justify-content: center;
+    }
+  }
+
+  /* Trusted-partner marquee — soft edge fade so wordmarks emerge and dissolve
+     rather than clipping hard at the container edge. */
+  .partner-marquee {
+    -webkit-mask-image: linear-gradient(
+      90deg,
+      transparent 0%,
+      #000 7%,
+      #000 93%,
+      transparent 100%
+    );
+    mask-image: linear-gradient(
+      90deg,
+      transparent 0%,
+      #000 7%,
+      #000 93%,
+      transparent 100%
+    );
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .partner-marquee {
+      -webkit-mask-image: none;
+      mask-image: none;
+    }
+  }
+
+  /* Testimonials — an architectural drawing room with one calm reading path.
+     The artwork is fixed only on capable viewports; mobile and reduced-motion
+     users receive the same composition without the parallax treatment. */
+  .home-testimonials {
+    background-color: var(--color-carbon-deep);
+    background-image:
+      linear-gradient(
+        180deg,
+        rgb(var(--color-carbon-deep-rgb) / 0.72),
+        rgb(var(--color-carbon-deep-rgb) / 0.5) 45%,
+        rgb(var(--color-carbon-deep-rgb) / 0.78)
+      ),
+      url("/img/testimonials/permit-drawings-1600.webp");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+  .home-testimonials::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    background-image:
+      radial-gradient(ellipse 62% 38% at 7% 108%, transparent 68%, rgb(var(--color-paper-rgb) / 0.07) 68.5%, transparent 69.2%),
+      radial-gradient(ellipse 74% 42% at 84% 112%, transparent 68%, rgb(var(--color-paper-rgb) / 0.055) 68.5%, transparent 69.2%);
+    mask-image: linear-gradient(90deg, transparent, #000 18%, #000 82%, transparent);
+  }
+  .testimonial-rating {
+    border-left: 1px solid rgb(var(--color-accent-rgb) / 0.6);
+    padding-left: 1.25rem;
+  }
+  .testimonial-card {
+    overflow: hidden;
+    border: 1px solid rgb(var(--color-paper-rgb) / 0.2);
+    background: rgb(var(--color-carbon-deep-rgb) / 0.78);
+    box-shadow:
+      0 28px 80px rgb(0 0 0 / 0.34),
+      inset 0 1px 0 rgb(var(--color-paper-rgb) / 0.04);
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+    transition:
+      border-color var(--dur-base) var(--ease-out),
+      transform var(--dur-base) var(--ease-out),
+      background-color var(--dur-base) var(--ease-out);
+  }
+  .testimonial-card:hover {
+    border-color: rgb(var(--color-accent-soft-rgb) / 0.52);
+    background-color: rgb(var(--color-carbon-deep-rgb) / 0.88);
+    transform: translateY(-3px);
+  }
+  .testimonial-selector {
+    display: inline-flex;
+    min-width: 2.75rem;
+    height: 2.75rem;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid rgb(var(--color-paper-rgb) / 0.25);
+    color: rgb(var(--color-paper-rgb) / 0.48);
+    font-family: var(--font-mono);
+    font-size: var(--text-2xs);
+    letter-spacing: 0.12em;
+    transition:
+      border-color var(--dur-base) var(--ease-out),
+      color var(--dur-base) var(--ease-out),
+      background-color var(--dur-base) var(--ease-out);
+  }
+  .testimonial-selector:hover,
+  .testimonial-selector[aria-pressed="true"] {
+    border-color: var(--color-accent-soft);
+    background-color: rgb(var(--color-paper-rgb) / 0.06);
+    color: var(--color-accent-soft);
+  }
+  .testimonial-timer {
+    position: relative;
+    width: clamp(3rem, 6vw, 5rem);
+    height: 1px;
+    overflow: hidden;
+    background-color: rgb(var(--color-paper-rgb) / 0.22);
+  }
+  .testimonial-timer-fill {
+    position: absolute;
+    inset: 0;
+    transform-origin: left;
+    background-color: var(--color-accent-soft);
+    animation: testimonial-timer 7000ms linear forwards;
+  }
+  .testimonial-timer-fill.is-paused {
+    animation-play-state: paused;
+  }
+  @keyframes testimonial-timer {
+    from { transform: scaleX(0); }
+    to { transform: scaleX(1); }
+  }
+  /* Coverflow "wheel": the active card faces front while neighbours rotate back
+     in perspective. Advancing spins the ring instead of sliding a strip. */
+  .tstm-stage {
+    position: relative;
+    height: 26rem;
+    perspective: 1600px;
+    touch-action: pan-y;
+    -webkit-user-select: none;
+    user-select: none;
+    transition: height 640ms var(--ease-out);
+  }
+  .tstm-track {
+    position: absolute;
+    inset: 0;
+    transform-style: preserve-3d;
+  }
+  .tstm-item {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: clamp(19rem, 30vw, 24rem);
+    height: auto;
+    transform: translateX(-50%);
+    transform-origin: center center;
+    transition:
+      transform 640ms var(--ease-out),
+      opacity 640ms var(--ease-out);
+    will-change: transform, opacity;
+  }
+  .tstm-item[data-pos="0"] {
+    transform: translateX(-50%) translateZ(0) rotateY(0deg) scale(1);
+    opacity: 1;
+    z-index: 5;
+  }
+  .tstm-item[data-pos="1"] {
+    transform: translateX(calc(-50% + 86%)) translateZ(-210px) rotateY(-38deg) scale(0.82);
+    opacity: 0.55;
+    z-index: 4;
+  }
+  .tstm-item[data-pos="-1"] {
+    transform: translateX(calc(-50% - 86%)) translateZ(-210px) rotateY(38deg) scale(0.82);
+    opacity: 0.55;
+    z-index: 4;
+  }
+  .tstm-item[data-pos="2"] {
+    transform: translateX(calc(-50% + 144%)) translateZ(-380px) rotateY(-46deg) scale(0.68);
+    opacity: 0.28;
+    z-index: 3;
+  }
+  .tstm-item[data-pos="-2"] {
+    transform: translateX(calc(-50% - 144%)) translateZ(-380px) rotateY(46deg) scale(0.68);
+    opacity: 0.28;
+    z-index: 3;
+  }
+  /* The active card fully covers whatever tucks behind it, so no text bleeds
+     through; neighbours become solid, blurred dark panels — they read as the
+     depth of a wheel, not as loose text behind the front card. */
+  .tstm-item[data-pos="0"] .testimonial-card {
+    background: rgb(var(--color-carbon-deep-rgb) / 0.97);
+    border-color: rgb(var(--color-accent-soft-rgb) / 0.35);
+  }
+  .tstm-item:not([data-pos="0"]) .testimonial-card {
+    background: rgb(var(--color-carbon-deep-rgb) / 0.94);
+    filter: blur(2.5px);
+  }
+  .tstm-item:not([data-pos="0"]) {
+    pointer-events: none;
+  }
+  .tstm-item[data-hidden="true"] {
+    opacity: 0;
+    pointer-events: none;
+    transform: translateX(-50%) translateZ(-520px) scale(0.6);
+    z-index: 1;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .tstm-item { transition: opacity 200ms linear; }
+    .testimonial-timer-fill { animation: none; transform: scaleX(1); }
+  }
+  @media (max-width: 767px), (prefers-reduced-motion: reduce) {
+    .home-testimonials {
+      background-image:
+        linear-gradient(
+          180deg,
+          rgb(var(--color-carbon-deep-rgb) / 0.76),
+          rgb(var(--color-carbon-deep-rgb) / 0.58) 45%,
+          rgb(var(--color-carbon-deep-rgb) / 0.82)
+        ),
+        url("/img/testimonials/permit-drawings-768.webp");
+      background-attachment: scroll;
+      background-position: center;
+    }
+    .home-testimonials::before {
+      background-size: 56px 56px;
+    }
+    .testimonial-card {
+      -webkit-backdrop-filter: none;
+      backdrop-filter: none;
+    }
+    /* Mobile: a single card faces front; neighbours are parked off-axis and
+       faded, so advancing rotates one card out and the next one in. */
+    .tstm-stage {
+      height: 30rem;
+      perspective: 1100px;
+    }
+    .tstm-item {
+      width: min(86vw, 24rem);
+    }
+    .tstm-item[data-pos="0"] {
+      transform: translateX(-50%) translateZ(0) rotateY(0deg) scale(1);
+      opacity: 1;
+    }
+    .tstm-item[data-pos="1"] {
+      transform: translateX(calc(-50% + 60%)) translateZ(-260px) rotateY(-48deg) scale(0.9);
+      opacity: 0;
+    }
+    .tstm-item[data-pos="-1"] {
+      transform: translateX(calc(-50% - 60%)) translateZ(-260px) rotateY(48deg) scale(0.9);
+      opacity: 0;
+    }
+    .tstm-item[data-pos="2"],
+    .tstm-item[data-pos="-2"] {
+      opacity: 0;
+    }
+  }
+
+  /* WhatsApp FAB ring */
+  .c-whatsapp-fab { isolation: isolate; transform-origin: center; animation: whatsapp-ring 1.8s ease-in-out infinite; }
+  .c-whatsapp-fab::before, .c-whatsapp-fab::after {
+    content: ""; position: absolute; inset: -7px;
+    border: 2px solid rgba(37, 211, 102, 0.55);
+    border-radius: 50%; pointer-events: none; z-index: -1;
+    animation: whatsapp-pulse 1.8s ease-out infinite;
+  }
+  .c-whatsapp-fab::after { animation-delay: 0.9s; }
+  @keyframes whatsapp-ring {
+    0%, 44%, 100% { transform: rotate(0deg) scale(1); }
+    4%, 12%, 20% { transform: rotate(-12deg) scale(1.04); }
+    8%, 16%, 24% { transform: rotate(12deg) scale(1.04); }
+    30% { transform: rotate(-6deg) scale(1.02); }
+    36% { transform: rotate(6deg) scale(1.02); }
+  }
+  @keyframes whatsapp-pulse {
+    0% { opacity: 0.65; transform: scale(0.82); }
+    70%, 100% { opacity: 0; transform: scale(1.5); }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .c-whatsapp-fab, .c-whatsapp-fab::before, .c-whatsapp-fab::after { animation: none; }
+  }
+}

@@ -1,0 +1,726 @@
+{
+  "hero": [
+    {
+      "base": "hero-drawings",
+      "sizes": [
+        480,
+        768,
+        1200,
+        1600
+      ],
+      "largest": 1600,
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "base": "hero-handover",
+      "sizes": [
+        480,
+        768,
+        1200,
+        1600
+      ],
+      "largest": 1600,
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "base": "hero-site",
+      "sizes": [
+        480,
+        768,
+        1200,
+        1600
+      ],
+      "largest": 1600,
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "base": "hero-skyline",
+      "sizes": [
+        480,
+        768,
+        1200,
+        1600
+      ],
+      "largest": 1600,
+      "width": 1536,
+      "height": 1024
+    }
+  ],
+  "authorities": [
+    {
+      "base": "civil-defence",
+      "sizes": [
+        480,
+        768,
+        1200,
+        1600
+      ],
+      "largest": 1600,
+      "width": 1672,
+      "height": 941
+    },
+    {
+      "base": "dda",
+      "sizes": [
+        480,
+        768,
+        1200,
+        1600
+      ],
+      "largest": 1600,
+      "width": 1672,
+      "height": 941
+    },
+    {
+      "base": "dewa",
+      "sizes": [
+        480,
+        768,
+        1200,
+        1600
+      ],
+      "largest": 1600,
+      "width": 1672,
+      "height": 941
+    },
+    {
+      "base": "dha",
+      "sizes": [
+        480,
+        768,
+        1200,
+        1600
+      ],
+      "largest": 1600,
+      "width": 1672,
+      "height": 941
+    },
+    {
+      "base": "dhcc",
+      "sizes": [
+        480,
+        768,
+        1200,
+        1600
+      ],
+      "largest": 1600,
+      "width": 1672,
+      "height": 941
+    },
+    {
+      "base": "difc",
+      "sizes": [
+        480,
+        768,
+        1200,
+        1600
+      ],
+      "largest": 1600,
+      "width": 1672,
+      "height": 941
+    },
+    {
+      "base": "dmcc",
+      "sizes": [
+        480,
+        768,
+        1200,
+        1600
+      ],
+      "largest": 1600,
+      "width": 1672,
+      "height": 941
+    },
+    {
+      "base": "dso",
+      "sizes": [
+        480,
+        768,
+        1200,
+        1600
+      ],
+      "largest": 1600,
+      "width": 1672,
+      "height": 941
+    },
+    {
+      "base": "dubai-municipality",
+      "sizes": [
+        480,
+        768,
+        1200,
+        1600
+      ],
+      "largest": 1600,
+      "width": 1672,
+      "height": 941
+    },
+    {
+      "base": "dubai-south",
+      "sizes": [
+        480,
+        768,
+        1200,
+        1600
+      ],
+      "largest": 1600,
+      "width": 1672,
+      "height": 941
+    },
+    {
+      "base": "emaar",
+      "sizes": [
+        480,
+        768,
+        1200,
+        1600
+      ],
+      "largest": 1600,
+      "width": 1672,
+      "height": 941
+    },
+    {
+      "base": "jafza",
+      "sizes": [
+        480,
+        768,
+        1200,
+        1600
+      ],
+      "largest": 1600,
+      "width": 1672,
+      "height": 941
+    },
+    {
+      "base": "nakheel",
+      "sizes": [
+        480,
+        768,
+        1200,
+        1600
+      ],
+      "largest": 1600,
+      "width": 1672,
+      "height": 941
+    },
+    {
+      "base": "rta",
+      "sizes": [
+        480,
+        768,
+        1200,
+        1600
+      ],
+      "largest": 1600,
+      "width": 1672,
+      "height": 941
+    },
+    {
+      "base": "trakhees",
+      "sizes": [
+        480,
+        768,
+        1200,
+        1600
+      ],
+      "largest": 1600,
+      "width": 1672,
+      "height": 941
+    }
+  ],
+  "projects": [
+    {
+      "base": "cafe",
+      "sizes": [
+        480,
+        768,
+        1200,
+        1600
+      ],
+      "largest": 1600,
+      "width": 1535,
+      "height": 1024
+    },
+    {
+      "base": "clinic",
+      "sizes": [
+        480,
+        768,
+        1200,
+        1600
+      ],
+      "largest": 1600,
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "base": "gym",
+      "sizes": [
+        480,
+        768,
+        1200,
+        1600
+      ],
+      "largest": 1600,
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "base": "hotel",
+      "sizes": [
+        480,
+        768,
+        1200,
+        1600
+      ],
+      "largest": 1600,
+      "width": 1537,
+      "height": 1023
+    },
+    {
+      "base": "nursery",
+      "sizes": [
+        480,
+        768,
+        1200,
+        1600
+      ],
+      "largest": 1600,
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "base": "office",
+      "sizes": [
+        480,
+        768,
+        1200,
+        1600
+      ],
+      "largest": 1600,
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "base": "pharmacy",
+      "sizes": [
+        480,
+        768,
+        1200,
+        1600
+      ],
+      "largest": 1600,
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "base": "restaurant",
+      "sizes": [
+        480,
+        768,
+        1200,
+        1600
+      ],
+      "largest": 1600,
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "base": "retail",
+      "sizes": [
+        480,
+        768,
+        1200,
+        1600
+      ],
+      "largest": 1600,
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "base": "salon",
+      "sizes": [
+        480,
+        768,
+        1200,
+        1600
+      ],
+      "largest": 1600,
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "base": "villa",
+      "sizes": [
+        480,
+        768,
+        1200,
+        1600
+      ],
+      "largest": 1600,
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "base": "warehouse",
+      "sizes": [
+        480,
+        768,
+        1200,
+        1600
+      ],
+      "largest": 1600,
+      "width": 1535,
+      "height": 1024
+    }
+  ],
+  "services": [
+    {
+      "base": "completion",
+      "sizes": [
+        480,
+        768,
+        1200,
+        1600
+      ],
+      "largest": 1600,
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "base": "drawings",
+      "sizes": [
+        480,
+        768,
+        1200,
+        1600
+      ],
+      "largest": 1600,
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "base": "fire-safety",
+      "sizes": [
+        480,
+        768,
+        1200,
+        1600
+      ],
+      "largest": 1600,
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "base": "food-safety",
+      "sizes": [
+        480,
+        768,
+        1200,
+        1600
+      ],
+      "largest": 1600,
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "base": "home-rescue",
+      "sizes": [
+        480,
+        768,
+        1200,
+        1600
+      ],
+      "largest": 1600,
+      "width": 1586,
+      "height": 992
+    },
+    {
+      "base": "noc",
+      "sizes": [
+        480,
+        768,
+        1200,
+        1600
+      ],
+      "largest": 1600,
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "base": "permit-management",
+      "sizes": [
+        480,
+        768,
+        1200,
+        1600
+      ],
+      "largest": 1600,
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "base": "renovation",
+      "sizes": [
+        480,
+        768,
+        1200,
+        1600
+      ],
+      "largest": 1600,
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "base": "rescue",
+      "sizes": [
+        480,
+        768,
+        1200,
+        1600
+      ],
+      "largest": 1600,
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "base": "signage",
+      "sizes": [
+        480,
+        768,
+        1200,
+        1600
+      ],
+      "largest": 1600,
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "base": "white-label",
+      "sizes": [
+        480,
+        768,
+        1200,
+        1600
+      ],
+      "largest": 1600,
+      "width": 1536,
+      "height": 1024
+    }
+  ],
+  "process": [
+    {
+      "base": "drawings-desk",
+      "sizes": [
+        480,
+        768,
+        1200,
+        1600
+      ],
+      "largest": 1600,
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "base": "inspection",
+      "sizes": [
+        480,
+        768,
+        1200,
+        1600
+      ],
+      "largest": 1600,
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "base": "site-survey",
+      "sizes": [
+        480,
+        768,
+        1200,
+        1600
+      ],
+      "largest": 1600,
+      "width": 1536,
+      "height": 1024
+    }
+  ],
+  "about": [
+    {
+      "base": "office-halo",
+      "sizes": [
+        480,
+        768,
+        1200,
+        1600
+      ],
+      "largest": 1600,
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "base": "team",
+      "sizes": [
+        480,
+        768,
+        1200,
+        1600
+      ],
+      "largest": 1600,
+      "width": 1536,
+      "height": 1024
+    }
+  ],
+  "jurisdictions": [
+    {
+      "base": "business-bay",
+      "sizes": [
+        480,
+        768,
+        1200,
+        1600
+      ],
+      "largest": 1600,
+      "width": 1586,
+      "height": 992
+    },
+    {
+      "base": "difc",
+      "sizes": [
+        480,
+        768,
+        1200,
+        1600
+      ],
+      "largest": 1600,
+      "width": 1586,
+      "height": 992
+    },
+    {
+      "base": "dubai-hills",
+      "sizes": [
+        480,
+        768,
+        1200,
+        1600
+      ],
+      "largest": 1600,
+      "width": 1586,
+      "height": 992
+    },
+    {
+      "base": "dubai-south",
+      "sizes": [
+        480,
+        768,
+        1200,
+        1600
+      ],
+      "largest": 1600,
+      "width": 1586,
+      "height": 992
+    },
+    {
+      "base": "healthcare-city",
+      "sizes": [
+        480,
+        768,
+        1200,
+        1600
+      ],
+      "largest": 1600,
+      "width": 1586,
+      "height": 992
+    },
+    {
+      "base": "jafza",
+      "sizes": [
+        480,
+        768,
+        1200,
+        1600
+      ],
+      "largest": 1600,
+      "width": 1586,
+      "height": 992
+    },
+    {
+      "base": "jlt",
+      "sizes": [
+        480,
+        768,
+        1200,
+        1600
+      ],
+      "largest": 1600,
+      "width": 1586,
+      "height": 992
+    },
+    {
+      "base": "jvc-nakheel",
+      "sizes": [
+        480,
+        768,
+        1200,
+        1600
+      ],
+      "largest": 1600,
+      "width": 1586,
+      "height": 992
+    },
+    {
+      "base": "palm-jumeirah",
+      "sizes": [
+        480,
+        768,
+        1200,
+        1600
+      ],
+      "largest": 1600,
+      "width": 1586,
+      "height": 992
+    },
+    {
+      "base": "silicon-oasis",
+      "sizes": [
+        480,
+        768,
+        1200,
+        1600
+      ],
+      "largest": 1600,
+      "width": 1586,
+      "height": 992
+    },
+    {
+      "base": "tecom-d3",
+      "sizes": [
+        480,
+        768,
+        1200,
+        1600
+      ],
+      "largest": 1600,
+      "width": 1586,
+      "height": 992
+    }
+  ],
+  "cta": [
+    {
+      "base": "cta-band",
+      "sizes": [
+        480,
+        768,
+        1200,
+        1600
+      ],
+      "largest": 1600,
+      "width": 1586,
+      "height": 992
+    }
+  ]
+}
