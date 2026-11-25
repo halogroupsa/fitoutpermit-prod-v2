@@ -6,6 +6,95 @@ import type { GuidePage } from "./types";
  */
 export const GUIDES: GuidePage[] = [
   {
+    slug: "office-fit-out-permit-before-signing-a-dubai-lease",
+    name: "What to prepare for an office fit-out permit before signing a Dubai lease",
+    title: "Office Fit-Out Permit Documents Before You Sign a Dubai Lease",
+    metaDescription: "Ask for the right office fit-out permit documents before signing a Dubai lease. Check the landlord’s consent, approved drawings, access and who files the application.",
+    publishedAt: "2026-11-25",
+    keywords: [
+      "office fit out permit documents Dubai",
+      "Dubai office fit-out lease checklist"
+    ],
+    heroImage: {
+      folder: "projects",
+      base: "office",
+      alt: "Modern office with glazed meeting rooms and an open work area"
+    },
+    intro: [
+      "Before you sign a Dubai office lease, ask for the building’s fit-out rules, the latest approved drawings for the unit and written confirmation of whether the owner will support your proposed works. If a document can only be issued later, find out who will provide it and when it is needed.",
+      "Imagine the agent shows you a fitted office and says a new meeting room will be easy to add. Mark the partition and door on the plan. Then ask who can check the layout against the existing ventilation, ceiling services and fire-safety systems. The answer can change what you agree to take on with the lease."
+    ],
+    sections: [
+      {
+        heading: "Confirm who reviews the works for this unit",
+        paragraphs: [
+          "Send the building name, unit number, plot details if available and a short description of the work to building management. Ask who reviews the fit-out and which forms or building rules it uses. If you are considering changes to the use, structure or floor area, flag them before relying on a standard fit-out route. Dubai Development Authority (DDA), for example, directs certain changes of that kind to a building modification application.",
+          "Ask who signs the owner’s no-objection certificate (NOC) and when it can be issued. Find out whether management reviews the drawings separately and issues its own permission for contractor access. In Jumeirah Lakes Towers, confirm the applicable DMCC and Concordia steps for the specific premises and scope."
+        ]
+      },
+      {
+        heading: "Ask for the documents that explain what you are taking over",
+        paragraphs: [
+          "Request the latest approved layout and any available drawings for the systems you expect to change. Ask about previous fit-out approvals and completion records for the unit. If the office came from a former tenant, have the proposed contractor compare the current rooms with those records during an agreed site visit."
+        ],
+        bullets: [
+          "Confirm exactly which office and floor are named in the draft lease and approval records.",
+          "Ask which partitions, ceilings and services the landlord will hand over and who deals with any work left by the previous tenant.",
+          "Get the current building fit-out manual or checklist, including working hours, contractor registration, delivery access and any deposits that apply."
+        ]
+      },
+      {
+        heading: "Set a date and an owner for each application document",
+        paragraphs: [
+          "Some documents can be collected during due diligence. Others depend on the tenancy or the design being agreed. DDA’s published fit-out checklist, for example, includes a tenant’s contractor appointment letter, a copy of Ejari, the building owner’s NOC, relevant authority NOCs and stamped approved and proposed drawings. Use the checklist for your own authority to confirm its exact submission requirements.",
+          "Write the owner and expected date next to each outstanding item. If the lease or tenancy registration has to be in place before filing, ask the landlord when it will be available. Give your consultant enough access to verify what the drawings show and agree who updates the submission if the scope changes."
+        ]
+      },
+      {
+        heading: "Put approvals and access on the same lease timeline",
+        paragraphs: [
+          "Compare the proposed rent start, survey access, approval submission and the date contractors can work in the unit. Ask when you can book the loading bay or lift and what the building needs to release a work permit, where applicable. Raise any gap with the landlord and your leasing adviser while you are still discussing the terms.",
+          "Ask what the contractor has to hand over at the end. DDA, for example, has a separate fit-out completion service and lists the Dubai Civil Defence completion certificate among its supporting documents. Put the applicable inspections and closeout responsibilities on the programme before committing to a move-in date."
+        ]
+      }
+    ],
+    faqs: [
+      {
+        q: "Can the review start before I sign the lease?",
+        a: "You can ask for the rules, confirm the likely approval route and arrange a survey with the owner’s permission. The formal application follows the applicable authority’s requirements. DDA’s published checklist includes an Ejari copy, so confirm when you can obtain it before putting a submission date in the programme."
+      },
+      {
+        q: "Does a previously fitted office have an approval I can rely on?",
+        a: "Ask for the previous approval and completion records and compare them with the office as it stands. Then give your proposed changes to building management or the appointed consultant to confirm what review, consent or permit is needed for that scope."
+      }
+    ],
+    relatedGuides: [
+      "fit-out-permit-documents-checklist",
+      "landlord-noc-vs-authority-approval"
+    ],
+    relatedLinks: [
+      {
+        href: "/permits/office-fit-out-permit",
+        label: "Office fit-out permit support",
+        sub: "Confirm the route and document list for your unit"
+      }
+    ],
+    sources: [
+      {
+        href: "https://dda.gov.ae/en/planning-development/construction/permits-nocs/fit-out-permit",
+        label: "Dubai Development Authority fit-out permit"
+      },
+      {
+        href: "https://dda.gov.ae/en/planning-development/construction/inspections-completions/fit-out-completion-certificate",
+        label: "Dubai Development Authority fit-out completion certificate"
+      },
+      {
+        href: "https://dmcc.ae/hubfs/2509857/C5-Migrated-Files/All-Files/NOC_for_Licenced_Co._Fit_Out.pdf",
+        label: "DMCC application guideline for a fit-out NOC to Concordia"
+      }
+    ]
+  },
+  {
     slug: "fit-out-permit-process-dubai",
     name: "The Complete Dubai Fit-Out Permit Process",
     title: "Fit-Out Permit Process in Dubai (2026) | Step-by-Step Guide",
@@ -18,9 +107,9 @@ export const GUIDES: GuidePage[] = [
       "dubai fit out permit steps",
     ],
     heroImage: {
-      folder: "services",
-      base: "permit-management",
-      alt: "Complete fit-out permit dossier laid out with drawings, NOCs and approval stamps",
+      folder: "hero",
+      base: "hero-site",
+      alt: "Two site staff inspecting an unfinished commercial interior",
     },
     intro: [
       "Every commercial fit-out in Dubai — office, shop, restaurant, clinic, warehouse — needs a permit before work starts, and a completion certificate before the space is legally occupied. The process is consistent in shape across the emirate, but the details change with jurisdiction: mainland units answer to Dubai Municipality, while free zones and master developments run their own building-control regimes.",
@@ -103,8 +192,8 @@ export const GUIDES: GuidePage[] = [
     ],
     heroImage: {
       folder: "services",
-      base: "completion",
-      alt: "Calculator and fee schedule beside approved fit-out permit documents",
+      base: "permit-management",
+      alt: "Tablet and application paperwork spread across a desk",
     },
     intro: [
       "Almost every consultancy in this market answers the cost question with 'contact us.' Here is the actual structure instead. Fit-out permit costs in Dubai stack four layers: government fees (formula-driven and predictable), refundable deposits (returned if you behave), consultancy fees (the market's least transparent layer) and the hidden fourth — the cost of delay, which dwarfs the other three when approvals go wrong.",
@@ -245,7 +334,7 @@ export const GUIDES: GuidePage[] = [
         a: "Licences, Ejari and insurances must be valid at submission and stay valid through review — a licence expiring mid-review stalls the application. We diarise expiry dates across the document set as standard practice.",
       },
     ],
-    relatedGuides: ["fit-out-permit-process-dubai", "landlord-noc-vs-authority-approval", "fit-out-permit-cost-dubai"],
+    relatedGuides: ["office-fit-out-permit-before-signing-a-dubai-lease", "fit-out-permit-process-dubai", "landlord-noc-vs-authority-approval", "fit-out-permit-cost-dubai"],
   },
   {
     slug: "dm-vs-dda-vs-trakhees",
@@ -497,7 +586,7 @@ export const GUIDES: GuidePage[] = [
     heroImage: {
       folder: "services",
       base: "completion",
-      alt: "Building completion certificate being reviewed at a finished fit-out handover",
+      alt: "Two reviewers checking a ceiling in a fitted office",
     },
     intro: [
       "The completion certificate is the least glamorous document in a fit-out and the one that determines whether everything before it legally happened. It certifies that the works match the approved drawings and the space is fit to occupy — and its absence surfaces at the worst moments: licence renewals, insurance claims, lease disputes and property sales.",
@@ -562,9 +651,9 @@ export const GUIDES: GuidePage[] = [
       "developer noc fit out",
     ],
     heroImage: {
-      folder: "services",
-      base: "noc",
-      alt: "Stack of consent documents — landlord NOC, developer NOC and authority permit — side by side",
+      folder: "hero",
+      base: "hero-handover",
+      alt: "A document on a reception desk in a finished commercial interior at dusk",
     },
     intro: [
       "'The landlord already approved it' might be the most expensive sentence in Dubai fit-outs — usually spoken just before unpermitted work starts. Landlord consent and government approval are different instruments from different parties protecting different interests, and every fit-out needs its full chain, in order.",

@@ -37,6 +37,7 @@ export const SITE = {
     responseHours: 4,
   },
   lastReviewed: "July 2026",
+  lastReviewedAt: "2026-07-13",
 } as const;
 
 export const NAV_MAIN = [

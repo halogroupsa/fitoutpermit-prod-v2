@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
+import { ResourcesArchivePage, resourcesArchiveMetadata } from "@/components/resources-archive-page";
+import { archivePages, archivePageFromPath } from "@/lib/archive-pagination";
 import { GUIDES, guideBySlug } from "@/data/guides";
 import { Breadcrumbs } from "@/components/ui/breadcrumbs";
 import { Accordion } from "@/components/ui/accordion";
@@ -11,24 +13,47 @@ import { articleSchema, faqSchema, JsonLd } from "@/lib/schema";
 import { SITE } from "@/lib/site";
 
 export function generateStaticParams() {
-  return GUIDES.map((g) => ({ slug: g.slug }));
+  return [
+    ...GUIDES.map(({ slug }) => ({ slug: [slug] })),
+    ...archivePages(GUIDES.length).map((page) => ({ slug: ["page", String(page)] })),
+  ];
 }
 
-export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
-  const { slug } = await params;
+function guideImage({ folder, base }: (typeof GUIDES)[number]["heroImage"]) {
+  return `/img/${folder}/${base}-1200.webp`;
+}
+
+export async function generateMetadata({ params }: { params: Promise<{ slug: string[] }> }): Promise<Metadata> {
+  const { slug: segments } = await params;
+  const archivePage = archivePageFromPath(`/resources/${segments.join("/")}`, GUIDES.length);
+  if (archivePage) return resourcesArchiveMetadata(archivePage);
+  if (segments.length !== 1) notFound();
+  const [slug] = segments;
   const g = guideBySlug(slug);
   if (!g) return {};
+  const image = guideImage(g.heroImage);
   return {
     title: g.title,
     description: g.metaDescription,
     keywords: g.keywords,
     alternates: { canonical: `/resources/${g.slug}` },
-    openGraph: { title: g.title, description: g.metaDescription, url: `/resources/${g.slug}`, type: "article" },
+    openGraph: {
+      title: g.title,
+      description: g.metaDescription,
+      url: `/resources/${g.slug}`,
+      type: "article",
+      publishedTime: g.publishedAt,
+      images: [{ url: image, alt: g.heroImage.alt }],
+    },
   };
 }
 
-export default async function GuidePage({ params }: { params: Promise<{ slug: string }> }) {
-  const { slug } = await params;
+export default async function GuidePage({ params }: { params: Promise<{ slug: string[] }> }) {
+  const { slug: segments } = await params;
+  const archivePage = archivePageFromPath(`/resources/${segments.join("/")}`, GUIDES.length);
+  if (archivePage) return <ResourcesArchivePage page={archivePage} />;
+  if (segments.length !== 1) notFound();
+  const [slug] = segments;
   const g = guideBySlug(slug);
   if (!g) notFound();
 
@@ -36,12 +61,20 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
     .map((s) => GUIDES.find((x) => x.slug === s))
     .filter(Boolean)
     .map((x) => ({ href: `/resources/${x!.slug}`, label: x!.name }));
+  const guideDate = g.publishedAt ?? SITE.lastReviewedAt;
+  const reviewDate = new Intl.DateTimeFormat("en-GB", { dateStyle: "long", timeZone: "UTC" }).format(new Date(guideDate));
 
   return (
     <>
       <JsonLd
         data={[
-          articleSchema({ headline: g.title, description: g.metaDescription, path: `/resources/${g.slug}` }),
+          articleSchema({
+            headline: g.title,
+            description: g.metaDescription,
+            path: `/resources/${g.slug}`,
+            publishedAt: g.publishedAt,
+            image: `${SITE.url}${guideImage(g.heroImage)}`,
+          }),
           faqSchema(g.faqs),
         ]}
       />
@@ -65,7 +98,7 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
           </aside>
 
           <article className="mx-auto w-full min-w-0 max-w-[74ch] lg:max-w-none">
-            <p className="eyebrow">Guide · {SITE.lastReviewed}</p>
+            <p className="eyebrow">{g.publishedAt ? "Published" : "Reviewed"} <time dateTime={guideDate}>{reviewDate}</time></p>
             <h1 className="mt-4 text-3xl">{g.title.split("|")[0].trim()}</h1>
             <div className="mt-6 grid gap-5">
               {g.intro.map((p, i) => (
@@ -74,7 +107,7 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
                 </p>
               ))}
             </div>
-            <ReviewNote date={SITE.lastReviewed} className="mt-6" />
+            <ReviewNote date={reviewDate} className="mt-6" />
 
             {g.sections.map((s, i) => (
               <section key={i} id={`s-${i}`} className="mt-12 scroll-mt-28">
@@ -105,8 +138,19 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
               </div>
             </section>
 
+            {g.sources && (
+              <section className="mt-12">
+                <ClauseHeading no="↗" title="Official references" />
+                <ul className="space-y-3 text-ink-soft">
+                  {g.sources.map(({ href, label }) => (
+                    <li key={href}><a href={href} className="underline underline-offset-4">{label}</a></li>
+                  ))}
+                </ul>
+              </section>
+            )}
+
             <div className="mt-14">
-              <RelatedLinks no="→" title="Keep reading" links={related} />
+              <RelatedLinks no="→" title="Keep reading" links={[...(g.relatedLinks ?? []), ...related]} />
             </div>
           </article>
         </div>

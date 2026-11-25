@@ -108,4 +108,7 @@ export type GuidePage = {
   sections: GuideSection[];
   faqs: Faq[];
   relatedGuides: string[];
+  publishedAt?: string;
+  relatedLinks?: { href: string; label: string; sub?: string }[];
+  sources?: { href: string; label: string }[];
 };

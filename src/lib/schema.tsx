@@ -93,6 +93,7 @@ export function articleSchema(opts: {
   description: string;
   path: string;
   image?: string;
+  publishedAt?: string;
 }) {
   return {
     "@context": "https://schema.org",
@@ -103,7 +104,8 @@ export function articleSchema(opts: {
     image: opts.image ?? `${SITE.url}/images/logo.png`,
     author: { "@id": `${SITE.url}/#organization` },
     publisher: { "@id": `${SITE.url}/#organization` },
-    dateModified: "2026-07-13",
+    ...(opts.publishedAt ? { datePublished: opts.publishedAt } : {}),
+    dateModified: opts.publishedAt ?? SITE.lastReviewedAt,
   };
 }
 
