@@ -6,9 +6,76 @@ import type { GuidePage } from "./types";
  */
 export const GUIDES: GuidePage[] = [
   {
+    slug: "villa-renovation-approval-checklist-dubai",
+    name: "Which villa renovation changes should you discuss with the approving authority?",
+    title: "Which villa renovation changes should you discuss with the approving authority?",
+    metaDescription: "Check which changes to a Dubai villa to raise with community management and the relevant authority, and what to send for an initial review.",
+    publishedAt: "2026-11-26",
+    keywords: ["villa renovation approval checklist Dubai", "Dubai villa modification approval", "villa renovation NOC"],
+    heroImage: {
+      folder: "projects",
+      base: "villa",
+      alt: "Dubai villa exterior beside construction formwork",
+    },
+    intro: [
+      "You want to take out a wall, bring the kitchen closer to the garden and shade the terrace. Put each change on the plan before asking which villa renovation approvals apply. The answer depends on the property, its approved layout and the work you intend to do.",
+      "Send the villa number, plot reference and a marked drawing to the community or property manager. Ask which authority reviews the proposed scope and what the manager needs for its own review. If you have an appointed consultant, ask them to confirm the route before any work starts.",
+    ],
+    sections: [
+      {
+        heading: "Highlight anything that changes the structure or exterior",
+        paragraphs: [
+          "Flag new wall openings, work that could affect beams or slabs, and any addition that changes built-up area. If you are enclosing a terrace or adding an extension, show where it sits against the existing house and plot boundary. Ask what a consultant needs to verify and which drawings are required.",
+          "Show changes visible from outside, such as new window openings, façade finishes or a pergola. Keep photos of the current elevations with the plan. Emaar’s home modification guidance, for example, addresses pergolas and kitchens separately and sets limits on external alterations in its communities.",
+        ],
+      },
+      {
+        heading: "Mark relocated kitchens, bathrooms and equipment",
+        paragraphs: [
+          "Give the reviewer the existing and proposed positions of sinks, wet areas and equipment. Name any changes proposed to drainage, ventilation or external outlets. Ask the appointed team to describe any impact on shared services or adjoining structures for the review.",
+          "Describe like-for-like replacements and layout changes as separate items. If the scope is mostly finishes, show the rooms and work involved anyway. Ask about the property’s community consent and site access rules. Emaar’s published FAQs, for example, say that kitchen and bathroom renovations in its communities require a community NOC.",
+        ],
+      },
+      {
+        heading: "Send the minimum information for an informed reply",
+        bullets: [
+          "Property details, latest available approved drawings and relevant approvals for previous work.",
+          "A simple existing and proposed layout with affected walls, openings and exterior areas marked.",
+          "Photos of the affected area and a description of the work, including any item still under investigation.",
+          "A request to confirm the responsible reviewers, application route, required drawings and party who files them.",
+        ],
+      },
+      {
+        heading: "Keep the approval route with the agreed scope",
+        paragraphs: [
+          "Record what each reviewer asks for. The community’s consent and the authority’s permit can be separate steps. Dubai Development Authority, for example, provides a Building Modification Permit route for eligible completed buildings within its jurisdiction. Have your project team confirm which route applies to your villa.",
+          "If the design changes after review, send the updated drawing and ask whether the submission or existing approvals need updating. Pass the written response and the correct drawing revision to the contractor before agreeing a start date for the affected work.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "What should I send if I am unsure whether a wall is structural?",
+        a: "Mark the wall on the existing layout, add photographs and tell the appointed consultant what opening or removal you are considering. Ask them to establish what can be verified from the drawings and what needs a site check before the work can be designed or submitted.",
+      },
+      {
+        q: "Can a community NOC be the only approval I need?",
+        a: "Ask the community manager and the responsible authority or consultant to confirm the route for your plot and exact scope. A community NOC records the community’s consent, and the relevant authority may also require a separate permit.",
+      },
+    ],
+    relatedGuides: ["landlord-noc-vs-authority-approval", "dm-vs-dda-vs-trakhees"],
+    relatedLinks: [
+      { href: "/permits/villa-renovation-permit", label: "Dubai villa renovation permit support", sub: "Check the approval route for your proposed works" },
+    ],
+    sources: [
+      { href: "https://dda.gov.ae/en/planning-development/construction/permits-nocs/building-modification-permit", label: "Dubai Development Authority Building Modification Permit" },
+      { href: "https://www.emaar.com/en/faq", label: "Emaar Community Management home modification FAQs" },
+    ],
+  },
+  {
     slug: "office-fit-out-permit-before-signing-a-dubai-lease",
     name: "What to prepare for an office fit-out permit before signing a Dubai lease",
-    title: "Office Fit-Out Permit Documents Before You Sign a Dubai Lease",
+    title: "What to prepare for an office fit-out permit before signing a Dubai lease",
     metaDescription: "Ask for the right office fit-out permit documents before signing a Dubai lease. Check the landlord’s consent, approved drawings, access and who files the application.",
     publishedAt: "2026-11-25",
     keywords: [
