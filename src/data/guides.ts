@@ -6,6 +6,53 @@ import type { GuidePage } from "./types";
  */
 export const GUIDES: GuidePage[] = [
   {
+    slug: "landlord-noc-fit-out-drawings-checklist-dubai",
+    name: "What a landlord NOC should cover before you submit fit-out drawings",
+    title: "What a landlord NOC should cover before you submit fit-out drawings",
+    metaDescription: "Check whether a landlord NOC identifies the right Dubai unit, tenant, scope and drawing revision before you submit fit-out plans for review.",
+    publishedAt: "2026-11-28",
+    keywords: ["landlord NOC fit-out checklist Dubai", "building owner NOC for fit-out", "fit-out drawing submission"],
+    heroImage: { folder: "hero", base: "hero-drawings", alt: "Architectural drawings prepared for review" },
+    intro: [
+      "Before submitting fit-out drawings, put the landlord’s no-objection certificate beside the drawing cover sheet. Check that the unit, tenant, scope and drawing revision match. Ask the reviewer which consent and format it accepts for your building.",
+      "For applicable projects, Dubai Development Authority lists the building owner’s NOC and the approved and proposed drawings among its fit-out submission documents. Confirm the requirements with the appointed team for your property."
+    ],
+    sections: [
+      {
+        heading: "Give the reviewer enough detail to identify the unit and work",
+        bullets: [
+          "Check the building name, unit number, tenant’s legal name and the lease or tenancy reference if requested.",
+          "Name the work the consent covers. If the landlord has only seen an office layout with furniture moved, check before using that letter for a layout with new partitions.",
+          "Record the issue date, the authorised signatory and any restrictions on the consent. Ask whether the reviewer wants a specific format or wording."
+        ]
+      },
+      {
+        heading: "Match the letter to the drawings you intend to submit",
+        paragraphs: [
+          "Where the letter refers to a plan, match its drawing number and revision with the copy in your submission. Say the landlord saw revision B before you moved a pantry. Put the new position in front of the appointed team and ask whether to obtain an updated letter before submitting revision C.",
+          "Keep the landlord’s conditions with the drawings. Ask the design team to flag items that affect layout, finishes, existing services or access before the contractor prices the work."
+        ]
+      },
+      {
+        heading: "Record the next approval and who is responsible",
+        paragraphs: [
+          "Save the signed letter, the drawing set it refers to and the date the team received it. Ask the coordinator to list any building management or authority reviews still pending and name the person responsible for each.",
+          "If the work description is still loose, ask the fit-out team for a marked plan and a short scope before requesting consent. It is easier for a landlord to respond to a defined proposal."
+        ]
+      }
+    ],
+    faqs: [
+      { q: "Can an email from the landlord be used as the NOC?", a: "Ask the relevant reviewer what format it accepts for the project. Check the signatory, unit, scope and any required references before relying on an email." },
+      { q: "What if the fit-out drawings change after consent?", a: "Flag the change to your appointed team and ask whether the letter or approval record needs updating for the revised scope." }
+    ],
+    relatedGuides: ["landlord-noc-vs-authority-approval", "request-a-revision-to-approved-fit-out-drawings-dubai"],
+    relatedLinks: [
+      { href: "/services/authority-noc-coordination", label: "Landlord and authority NOC coordination", sub: "Check the consent route for your unit" },
+      { href: "https://halo.ae/services/fitout-dubai", label: "Halo Interiors’ Dubai fit-out service", sub: "Define the work that should appear in your scope and drawings" }
+    ],
+    sources: [{ href: "https://dda.gov.ae/en/planning-development/construction/permits-nocs/fit-out-permit", label: "Dubai Development Authority fit-out permit requirements" }]
+  },
+  {
     slug: "request-a-revision-to-approved-fit-out-drawings-dubai",
     name: "How to request a revision to approved fit-out drawings in Dubai",
     title: "How to request a revision to approved fit-out drawings in Dubai",
