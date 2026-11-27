@@ -6,6 +6,49 @@ import type { GuidePage } from "./types";
  */
 export const GUIDES: GuidePage[] = [
   {
+    slug: "request-a-revision-to-approved-fit-out-drawings-dubai",
+    name: "How to request a revision to approved fit-out drawings in Dubai",
+    title: "How to request a revision to approved fit-out drawings in Dubai",
+    metaDescription: "A fit-out layout has changed after approval. Prepare the stamped set, proposed revisions and change log before asking which review route applies in Dubai.",
+    publishedAt: "2026-11-27",
+    keywords: ["fit-out design revision Dubai", "revise approved fit-out drawings", "DDA fit-out design revision"],
+    heroImage: { folder: "process", base: "drawings-desk", alt: "Printed floor plans and drawing tools on a desk" },
+    intro: [
+      "If your approved fit-out layout changes before work starts, have your appointed team compare the new layout with the stamped set and confirm whether a revision submission is needed. Keep the affected work on hold while the team gets direction from the relevant reviewer.",
+      "For projects within its jurisdiction, Dubai Development Authority lists a design revision service that includes fit-out work. Its guidance lists the contractor as requester for fit-out revisions. Ask your team which process applies to your unit and the proposed change."
+    ],
+    sections: [
+      {
+        heading: "Keep the approved set and the new set side by side",
+        paragraphs: [
+          "Suppose you move a store partition to gain space for a staff area. Mark the approved line and the proposed line. Ask the designer which other drawings need updating, such as the reflected ceiling plan or the drawings for services serving the rooms.",
+          "Set out changes by drawing number, revision and reason. Make the summary clear enough that the reviewer can see the difference without opening both sets and searching room by room."
+        ]
+      },
+      {
+        heading: "Ask which reviews the proposal affects",
+        paragraphs: [
+          "Ask the appointed team whether the change affects circulation, fire and life safety, ventilation or another discipline. Confirm whether the landlord or building manager needs to review the revised scope or update a consent it already issued. Give the reviewer the permit reference and the relevant stamped sheets."
+        ]
+      },
+      {
+        heading: "Give site one drawing set to use",
+        bullets: [
+          "Record the current approved revision and which sheets the team is proposing to replace.",
+          "Share the revised set and the reviewer’s response with the trades working in the affected area.",
+          "Ask who will acknowledge receipt and remove superseded copies from site before the affected work is released."
+        ]
+      }
+    ],
+    faqs: [
+      { q: "Who applies for a DDA fit-out design revision?", a: "Dubai Development Authority lists the contractor as requester for fit-out design revisions. Confirm that DDA applies to your project before using its process." },
+      { q: "What if the work has already been built?", a: "Tell the appointed team what has been built, share photos and ask the relevant reviewer which process applies. The site condition may require a different route from a proposal that has yet to be built." }
+    ],
+    relatedGuides: ["landlord-noc-vs-authority-approval", "completion-certificate-guide"],
+    relatedLinks: [{ href: "/services/drawing-preparation", label: "Fit-out drawing preparation in Dubai", sub: "Review the drawing set before submission" }],
+    sources: [{ href: "https://dda.gov.ae/en/planning-development/design/design-revision", label: "Dubai Development Authority design revision service" }]
+  },
+  {
     slug: "villa-renovation-approval-checklist-dubai",
     name: "Which villa renovation changes should you discuss with the approving authority?",
     title: "Which villa renovation changes should you discuss with the approving authority?",
