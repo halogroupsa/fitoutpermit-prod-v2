@@ -102,6 +102,17 @@ export default function ForContractorsPage() {
             </li>
           ))}
         </ul>
+        <p className="reveal mt-6 max-w-3xl text-base leading-relaxed text-ink-soft">
+          If your fit-out team needs a separate supplier for fitted cabinetry or other bespoke
+          manufacturing, you can{" "}
+          <a
+            className="font-medium text-accent-deep underline underline-offset-4"
+            href="https://joinery.ae/about"
+          >
+            meet the Joinery workshop
+          </a>{" "}
+          in Al Quoz to discuss the manufacturing scope.
+        </p>
       </section>
 
       <section className="container-page section-sm">

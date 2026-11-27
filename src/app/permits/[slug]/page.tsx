@@ -134,12 +134,36 @@ export default async function ProjectTypePage({ params }: { params: Promise<{ sl
             </section>
 
             <ChecklistBlock id="documents" no="02" title="Core documents" items={p.documents} />
+            {p.slug === "villa-renovation-permit" && (
+              <p className="reveal mb-8 max-w-3xl text-base leading-relaxed text-ink-soft">
+                Once you have outlined the work and drawings, you can discuss{" "}
+                <a
+                  className="font-medium text-accent-deep underline underline-offset-4"
+                  href="https://halo.ae/services/villa-renovation-dubai"
+                >
+                  villa renovation by Halo Interiors
+                </a>{" "}
+                if you are still selecting a contractor.
+              </p>
+            )}
             <WarningsBlock id="watchouts" no="03" title="Watch-outs that decide your programme" items={p.watchouts} />
             <StepsBlock id="process" no="04" title="How we run it" steps={p.steps} />
 
             <section id="timeline" className="section-sm scroll-mt-28">
               <ClauseHeading no="05" title="Timeline" />
               <p className="reveal max-w-3xl text-base leading-relaxed text-ink-soft">{p.timelineNote}</p>
+              {p.slug === "office-fit-out-permit" && (
+                <p className="reveal mt-4 max-w-3xl text-base leading-relaxed text-ink-soft">
+                  Still choosing a contractor? Explore{" "}
+                  <a
+                    className="font-medium text-accent-deep underline underline-offset-4"
+                    href="https://halo.ae/commercial/offices"
+                  >
+                    office fit-out by Halo Interiors
+                  </a>{" "}
+                  to discuss delivery and how the build programme fits around your approvals.
+                </p>
+              )}
             </section>
 
             <section id="faqs" className="section-sm scroll-mt-28">

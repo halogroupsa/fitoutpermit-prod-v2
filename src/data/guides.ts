@@ -18,7 +18,7 @@ export const GUIDES: GuidePage[] = [
       alt: "Dubai villa exterior beside construction formwork",
     },
     intro: [
-      "You want to take out a wall, bring the kitchen closer to the garden and shade the terrace. Put each change on the plan before asking which villa renovation approvals apply. The answer depends on the property, its approved layout and the work you intend to do.",
+      "Flag changes to structure, exterior appearance or built-up area, along with any kitchen or bathroom move that affects drainage, ventilation or shared services. Mark each change on the approved villa layout and ask the community manager and appointed team which approvals apply to your plot.",
       "Send the villa number, plot reference and a marked drawing to the community or property manager. Ask which authority reviews the proposed scope and what the manager needs for its own review. If you have an appointed consultant, ask them to confirm the route before any work starts.",
     ],
     sections: [
@@ -46,6 +46,13 @@ export const GUIDES: GuidePage[] = [
         ],
       },
       {
+        heading: "Make each proposed change easy to review",
+        paragraphs: [
+          "For a proposed kitchen move, mark the old and proposed positions on the same plan. Add where the team expects to route the new drainage and extract, and ask the reviewer which drawings and checks are needed. If the route is still under review, label it as provisional.",
+          "List a new garden-facing opening and a terrace enclosure as separate items. Attach an elevation photo for the opening and a sketch showing the enclosure against the approved footprint. Ask who reviews the structural and external changes, then record the reply against each item before instructing the affected work.",
+        ],
+      },
+      {
         heading: "Keep the approval route with the agreed scope",
         paragraphs: [
           "Record what each reviewer asks for. The community’s consent and the authority’s permit can be separate steps. Dubai Development Authority, for example, provides a Building Modification Permit route for eligible completed buildings within its jurisdiction. Have your project team confirm which route applies to your villa.",
@@ -69,7 +76,8 @@ export const GUIDES: GuidePage[] = [
     ],
     sources: [
       { href: "https://dda.gov.ae/en/planning-development/construction/permits-nocs/building-modification-permit", label: "Dubai Development Authority Building Modification Permit" },
-      { href: "https://www.emaar.com/en/faq", label: "Emaar Community Management home modification FAQs" },
+      { href: "https://www.ecm.ae/en/communities/arabian-ranches/lifestyle/faqs/home-modifications-arabian-ranches/", label: "Emaar Community Management’s Arabian Ranches home modification guidance" },
+      { href: "https://www.emaar.com/en/faq", label: "Emaar’s FAQs on kitchen, bathroom and outdoor modifications" },
     ],
   },
   {
